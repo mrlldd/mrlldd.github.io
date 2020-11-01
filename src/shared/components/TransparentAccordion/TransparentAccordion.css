@@ -1,0 +1,61 @@
+.TransparentAccordion {
+  min-height: 20%;
+  display: flex;
+  margin: 4px 0;
+  width: 100%;
+}
+
+.accordion {
+  width: 100%
+}
+
+.accordion-header {
+  user-select: none;
+  cursor: pointer;
+}
+
+.accordion-header:hover {
+  opacity: 0.8;
+}
+
+.accordion-arrow-container {
+  user-select: none;
+  text-align: center;
+  font-family: 'JetBrains Mono', serif;
+  font-size: 16px;
+  transition: font-size 0.1s;
+  transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+  margin: 0 8px;
+  min-width: 32px;
+}
+
+.accordion-arrow-container:hover {
+  font-size: 20px;
+  transition: font-size 0.3s;
+}
+.accordion-arrow-content {
+  writing-mode: vertical-rl;
+  transition: transform 1s;
+}
+.accordion-content {
+  overflow: hidden;
+  transition: height 1s ease;
+}
+
+.accordion-arrow-content-flipped {
+  transform: rotate(-60deg);
+  transition: transform 1s;
+}
+
+@keyframes switchOpacity {
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
