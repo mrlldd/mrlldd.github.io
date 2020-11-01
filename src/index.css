@@ -1,0 +1,67 @@
+body {
+  background-color: rgb(10, 38, 95);
+  margin: 0;
+  font-family: Noto Sans JP, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  min-height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+}
+
+code {
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+  color: #a5a5a5;
+}
+
+@font-face {
+  font-family: JetBrains Mono;
+  src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf');
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.some-margin-left {
+  margin-left: 25px;
+}
+
+.switching-opacity {
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.switch-opacity-a-few-with-color {
+  animation-name: switchOpacityAFewWithColor;
+}
+
+.switch-opacity-a-lot {
+  animation-name: switchOpacityALot;
+}
+
+@keyframes switchOpacityAFewWithColor {
+  50% {
+    opacity: 0.8;
+    color: #a5a5a5;
+  }
+  100% {
+    opacity: 1;
+    color: white;
+  }
+}
+
+@keyframes switchOpacityALot {
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}

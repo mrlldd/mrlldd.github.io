@@ -1,0 +1,58 @@
+.Dashboard {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-width: 224px;
+  max-width: 40%;
+  z-index: 1;
+}
+
+.dashboard-content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin: 0;
+}
+
+.link-container {
+  user-select: none;
+}
+
+.info-container {
+  text-align: center;
+}
+
+.link-logo:hover {
+  cursor: pointer;
+}
+
+.link-logo {
+  color: white;
+  min-width: 64px;
+  max-width: 10%;
+}
+
+.links-logos {
+  max-width: 50%;
+  min-height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.centered {
+  text-align: center;
+  display: block;
+  color: white;
+  margin: 15px 0;
+}
