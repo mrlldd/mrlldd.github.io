@@ -1,0 +1,8 @@
+.Summary {
+    position: absolute;
+    z-index: 2754;
+}
+
+.summary-paper > h1 {
+    text-align: center;
+}
