@@ -23,7 +23,6 @@ const BackgroundCanvas: React.FC = () => {
                 width: rect.width,
                 height: rect.height,
             }
-            console.log(size)
             setSize(size)
         }
 
