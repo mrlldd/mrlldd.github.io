@@ -1,32 +1,45 @@
-import React from 'react';
-import './Summary.css';
-import {createStyles, Paper, Theme} from "@material-ui/core";
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import React from 'react'
+import './Summary.css'
+import { Paper } from '@material-ui/core'
 
-const useStyles = makeStyles((theme: Theme) => {
-        const width = theme.spacing(70);
-        const height = theme.spacing(47);
-        return createStyles({
-            root: {
-                left: `calc(50% - ${width / 2}px)`,
-                top: `calc(50% - ${height / 2}px)`,
-                '& > *': {
-                    width: width,
-                    height: height
-                }
-            }
-        });
-    }
-);
+const frontendSkills = ['react', 'angular']
+
+const backendSkills = ['dotnet', 'aspnetcore', 'efcore', 'mssql']
+const devopsSkills = ['azure', 'heroku']
+const languages = ['ts', 'js', 'csharp']
 
 const Summary: React.FC = () => {
-    const styles = useStyles();
     return (
-        <div className={`${styles.root} Summary`} data-testid="Summary">
-            <Paper elevation={5} className="summary-paper">
+        <div className={'Summary'} data-testid="Summary">
+            <Paper elevation={5} className={`summary-paper`}>
+                <h1>Ivan Yeremenko</h1>
+                <div className="skills-sets-container">
+                    {[
+                        frontendSkills,
+                        backendSkills,
+                        devopsSkills,
+                        languages,
+                    ].map((skillSet, index) => (
+                        <div
+                            key={`${index}:skill-set`}
+                            className={`skill-set-container ${
+                                index % 2 === 0 ? 'even' : 'odd'
+                            }`}
+                        >
+                            {skillSet.map((x, skillIndex) => (
+                                <span
+                                    key={`${index}:${skillIndex}:skill`}
+                                    className="skill-container"
+                                >
+                                    {x}
+                                </span>
+                            ))}
+                        </div>
+                    ))}
+                </div>
             </Paper>
         </div>
-    );
-};
+    )
+}
 
-export default Summary;
+export default Summary

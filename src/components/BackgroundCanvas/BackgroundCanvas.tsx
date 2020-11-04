@@ -1,7 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './BackgroundCanvas.css'
-import { Layer, Stage, Text } from 'react-konva'
-import Konva from 'konva'
+import { Layer, Stage } from 'react-konva'
 import DynamicText from '../DynamicText/DynamicText'
 
 export interface Size {
@@ -10,22 +9,29 @@ export interface Size {
 }
 
 const BackgroundCanvas: React.FC = () => {
-    const [size, setSize] = useState<Size>({
-        height: window.innerHeight,
-        width: window.innerWidth,
+    const [size, setSize] = useState<Size>(() => {
+        const rect = document.documentElement.getBoundingClientRect()
+        return {
+            width: rect.width,
+            height: rect.height,
+        }
     })
     useEffect(() => {
         function resizeEventListener() {
-            setSize({
-                width: window.innerWidth,
-                height: window.innerHeight,
-            })
+            const rect = document.documentElement.getBoundingClientRect()
+            const size: Size = {
+                width: rect.width,
+                height: rect.height,
+            }
+            console.log(size)
+            setSize(size)
         }
 
         function performEventListenerAction(
             action: (type: string, listener: () => void) => void
         ) {
             action('resize', resizeEventListener)
+            action('orientationchange', resizeEventListener)
         }
 
         performEventListenerAction(window.addEventListener)
@@ -34,9 +40,9 @@ const BackgroundCanvas: React.FC = () => {
 
     return (
         <div className="BackgroundCanvas" data-testid="BackgroundCanvas">
-            <Stage width={size.width} height={size.height}>
+            <Stage width={size.width} height={size.height} className="stage">
                 <Layer>
-                    {Array(10)
+                    {Array(24)
                         .fill(undefined)
                         .map((_, index) => (
                             <DynamicText

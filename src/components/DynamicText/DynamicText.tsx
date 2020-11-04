@@ -3,38 +3,22 @@ import './DynamicText.css'
 import Konva from 'konva'
 import { Text } from 'react-konva'
 import { Size } from '../BackgroundCanvas/BackgroundCanvas'
-
-const textValues = [
-    'void',
-    'public',
-    'private',
-    'protected',
-    'int',
-    'observable$',
-    'class',
-    'struct',
-    '.Equals()',
-    'Task<TResult>',
-    'Task',
-    'typeof(Startup).Assembly',
-    'store',
-    'dispatch',
-    'useState',
-    'useEffect',
-    '[] != []',
-    'async',
-    'await',
-]
+import { getRandomTextValue } from './dynamic-text-values'
 
 interface DynamicTextProps {
     layerSize: Size
+}
+
+interface Position {
+    x: number
+    y: number
 }
 
 function calculateDeltaVector(
     rads: number,
     sign: number,
     pathLength: number
-): { x: number; y: number } {
+): Position {
     return {
         x: sign * Math.cos(rads) * pathLength,
         y: sign * Math.sin(rads) * pathLength,
@@ -53,12 +37,16 @@ interface DynamicTextConfig {
     fontSize: number
     rotation: number
     side: boolean
-    position: {
-        x: number
-        y: number
-    }
+    position: Position
     pathLength: number
     value: string
+}
+
+function calculatePosition(layerSize: Size): Position {
+    return {
+        x: layerSize.width * Math.random(),
+        y: layerSize.height * Math.random(),
+    }
 }
 
 function calculateDynamicTextConfig(
@@ -67,17 +55,14 @@ function calculateDynamicTextConfig(
 ): DynamicTextConfig {
     const opacityWithNonce = nonce + 0.35
     return {
-        duration: nonce * 1.5 + 1.5,
-        fontSize: 20 + nonce * 16,
+        duration: nonce * 1.5 + 2.5,
+        fontSize: 14 + nonce * 22,
         opacity: opacityWithNonce > 1 ? 0.7 : opacityWithNonce,
-        position: {
-            x: layerSize.width * Math.random(),
-            y: layerSize.height * Math.random(),
-        },
+        position: calculatePosition(layerSize),
         rotation: ((nonce * 180 - 90) * Math.PI) / 180,
         side: nonce % 0.02 > 0.01,
         pathLength: nonce * 100 + 100,
-        value: textValues[Math.round(Math.random() * textValues.length) - 1],
+        value: getRandomTextValue(),
     }
 }
 
@@ -118,10 +103,7 @@ const DynamicText: React.FC<DynamicTextProps> = (props: DynamicTextProps) => {
                 })
                 break
             case DynamicTextStages.BeforeStart:
-                const newPosition = {
-                    x: props.layerSize.width * Math.random(),
-                    y: props.layerSize.height * Math.random(),
-                }
+                const newPosition = calculatePosition(props.layerSize)
                 textFigure.to({
                     x: newPosition.x,
                     y: newPosition.y,
@@ -147,6 +129,7 @@ const DynamicText: React.FC<DynamicTextProps> = (props: DynamicTextProps) => {
             x={config.position.x}
             opacity={0}
             fontSize={config.fontSize}
+            fontFamily={'JetBrains Mono'}
             rotation={(config.rotation * 180) / Math.PI}
             fill={'rgb(255, 255, 255, 0.5)'}
         />

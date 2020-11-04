@@ -1,17 +1,15 @@
-import React from 'react';
-import './App.css';
-import BackgroundCanvas from "./components/BackgroundCanvas/BackgroundCanvas";
-import Summary from "./components/Summary/Summary";
+import React from 'react'
+import './App.css'
+import BackgroundCanvas from './components/BackgroundCanvas/BackgroundCanvas'
+import Summary from './components/Summary/Summary'
 
 function App() {
-
     return (
         <div className="App">
-
-            {/*<Summary/>*/}
-            <BackgroundCanvas/>
+            <BackgroundCanvas />
+            <Summary />
         </div>
-    );
+    )
 }
 
-export default App;
+export default App
