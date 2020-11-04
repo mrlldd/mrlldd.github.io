@@ -1,0 +1,97 @@
+.Summary {
+    position: relative;
+    min-width: 50%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.info-container > h1 {
+    text-align: center;
+}
+
+.summary-paper {
+    min-width: 50%;
+    min-height: 80%;
+    margin: 15% 0;
+    z-index: 1;
+}
+
+.info-container {
+    background: white;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+}
+
+.link-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.link-container:hover .outer {
+    transition: 0.1s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.link-container:hover .inner {
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.link-logo {
+    color: white;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.outer {
+    background-color: white;
+    transition: background-color 0.5s;
+    position: absolute;
+}
+.inner {
+    opacity: 1;
+    transition: opacity 0.3s;
+    position: absolute;
+}
+
+.skills-sets-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.skills-sets-container > * > .skill-container {
+    font-family: 'JetBrains Mono', serif;
+    margin: 3px;
+}
+
+.skill-set-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    min-width: 50%;
+    flex-wrap: wrap;
+}
+
+.skills-sets-container > .even {
+    align-self: flex-start;
+}
+
+.skills-sets-container > .odd {
+    align-self: flex-end;
+}
