@@ -10,47 +10,6 @@ const backendSkills = ['dotnet', 'aspnetcore', 'efcore', 'mssql']
 const devopsSkills = ['azure', 'heroku']
 const languages = ['ts', 'js', 'csharp']
 
-interface LogoNamePair {
-    name: string
-    logo: string
-}
-
-const links: LogoNamePair[] = [
-    {
-        logo: githubOuterLogo,
-        name: 'GitHub',
-    },
-    {
-        logo: telegramOuterLogo,
-        name: 'Telegram',
-    },
-    {
-        logo: spotifyOuterLogo,
-        name: 'Spotify',
-    },
-]
-
-function WithSideFillers<T>(
-    items: T[],
-    render: (source: T, index: number) => JSX.Element,
-    key: Key
-): JSX.Element {
-    return (
-        <>
-            <div key={`0:${key}:side-fill`} className="link-side-fill" />
-            {items.map((x, index) => (
-                <>
-                    {render(x, index)}
-                    <div
-                        key={`${index + 1}:${key}:side-fill`}
-                        className="link-side-fill"
-                    />
-                </>
-            ))}
-        </>
-    )
-}
-
 const Summary: React.FC = () => (
     <div className="Summary" data-testid="Summary">
         <div className="summary-paper">
