@@ -15,7 +15,7 @@
 .summary-paper {
     min-width: 50%;
     min-height: 80%;
-    margin: 15% 0;
+    margin: 15% 15%;
     z-index: 1;
 }
 
@@ -24,48 +24,43 @@
 }
 
 .links-container {
+    height: 25%;
+}
+
+.links-content-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 200px;
+    justify-content: stretch;
+    align-content: stretch;
 }
 
 .link-container {
-    height: 100%;
-    width: 100%;
+    flex-basis: 8.33333333333333%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    position: relative;
 }
 
-.link-container:hover .outer {
-    transition: 0.1s;
+.link-content-name-container {
+    background-color: white;
+    text-align: center;
+}
+
+.link-side-fill {
+    flex-basis: 18.75%;
+    min-height: 100%;
+    background-color: white;
+}
+
+.link-logo:hover {
+    transition: 0.5s;
     background-color: rgba(0, 0, 0, 0);
-}
-
-.link-container:hover .inner {
-    transition: 0.3s;
-    opacity: 0;
 }
 
 .link-logo {
     color: white;
-    max-height: 100%;
     max-width: 100%;
-}
-
-.outer {
-    background-color: white;
     transition: background-color 0.5s;
-    position: absolute;
-}
-.inner {
-    opacity: 1;
-    transition: opacity 0.3s;
-    position: absolute;
+    background-color: black;
 }
 
 .skills-sets-container {

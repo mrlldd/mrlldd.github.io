@@ -1,58 +1,126 @@
-import React from 'react'
+import React, { Key } from 'react'
 import './Summary.css'
-import spotifyLogo from './links/spotify.svg'
-import spotifyInner from './links/spotify-inner.svg'
+import spotifyOuterLogo from './links/spotify-outer.svg'
+import githubOuterLogo from './links/github-outer.svg'
+import telegramOuterLogo from './links/telegram-outer.svg'
+
 const frontendSkills = ['react', 'angular']
 
 const backendSkills = ['dotnet', 'aspnetcore', 'efcore', 'mssql']
 const devopsSkills = ['azure', 'heroku']
 const languages = ['ts', 'js', 'csharp']
 
-const Summary: React.FC<React.PropsWithChildren<unknown>> = (
-    props: React.PropsWithChildren<unknown>
-) => {
+interface LogoNamePair {
+    name: string
+    logo: string
+}
+
+const links: LogoNamePair[] = [
+    {
+        logo: githubOuterLogo,
+        name: 'GitHub',
+    },
+    {
+        logo: telegramOuterLogo,
+        name: 'Telegram',
+    },
+    {
+        logo: spotifyOuterLogo,
+        name: 'Spotify',
+    },
+]
+
+function WithSideFillers<T>(
+    items: T[],
+    render: (source: T, index: number) => JSX.Element,
+    key: Key
+): JSX.Element {
     return (
-        <div className={'Summary'} data-testid="Summary">
-            <div className={`summary-paper`}>
-                <div className="info-container">
-                    <h1>Ivan Yeremenko</h1>
-                    <div className="skills-sets-container">
-                        {[
-                            frontendSkills,
-                            backendSkills,
-                            devopsSkills,
-                            languages,
-                        ].map((skillSet, index) => (
-                            <div
-                                key={`${index}:skill-set`}
-                                className={`skill-set-container ${
-                                    index % 2 === 0 ? 'even' : 'odd'
-                                }`}
-                            >
-                                {skillSet.map((x, skillIndex) => (
-                                    <span
-                                        key={`${index}:${skillIndex}:skill`}
-                                        className="skill-container"
-                                    >
-                                        {x}
-                                    </span>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="links-container">
-                    <div className="link-container">github</div>
-                    <div className="link-container">telegram</div>
-                    <div className="link-container">
-                        <img src={spotifyLogo} className="link-logo outer" />
-                        <img src={spotifyInner} className="link-logo inner" />
-                    </div>
-                </div>
-            </div>
-            {props.children}
-        </div>
+        <>
+            <div key={`0:${key}:side-fill`} className="link-side-fill" />
+            {items.map((x, index) => (
+                <>
+                    {render(x, index)}
+                    <div
+                        key={`${index + 1}:${key}:side-fill`}
+                        className="link-side-fill"
+                    />
+                </>
+            ))}
+        </>
     )
 }
+
+const Summary: React.FC = () => (
+    <div className="Summary" data-testid="Summary">
+        <div className="summary-paper">
+            <div className="info-container">
+                <h1>Ivan Yeremenko</h1>
+                <div className="skills-sets-container">
+                    {[
+                        frontendSkills,
+                        backendSkills,
+                        devopsSkills,
+                        languages,
+                    ].map((skillSet, index) => (
+                        <div
+                            key={`${index}:skill-set`}
+                            className={`skill-set-container ${
+                                index % 2 === 0 ? 'even' : 'odd'
+                            }`}
+                        >
+                            {skillSet.map((x, skillIndex) => (
+                                <span
+                                    key={`${index}:${skillIndex}:skill`}
+                                    className="skill-container"
+                                >
+                                    {x}
+                                </span>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
+            <div className="links-container">
+                <div className="links-content-container">
+                    <div className="link-side-fill" />
+                    <div className="link-container">
+                        <img src={githubOuterLogo} className="link-logo" />
+                    </div>
+                    <div className="link-side-fill" />
+                    <div className="link-container">
+                        <img src={telegramOuterLogo} className="link-logo" />
+                    </div>
+                    <div className="link-side-fill" />
+                    <div className="link-container">
+                        <img src={spotifyOuterLogo} className="link-logo" />
+                    </div>
+                    <div className="link-side-fill" />
+                </div>
+                <div className="links-content-container">
+                    <div className="link-side-fill" />
+                    <div className="link-container">
+                        <div className="link-content-name-container">
+                            GitHub
+                        </div>
+                    </div>
+                    <div className="link-side-fill" />
+                    <div className="link-container">
+                        <div className="link-content-name-container">
+                            Telegram
+                        </div>
+                    </div>
+                    <div className="link-side-fill" />
+                    <div className="link-container">
+                        <div className="link-content-name-container">
+                            Spotify
+                        </div>
+                    </div>
+                    <div className="link-side-fill" />
+                </div>
+            </div>
+        </div>
+    </div>
+)
 
 export default Summary
