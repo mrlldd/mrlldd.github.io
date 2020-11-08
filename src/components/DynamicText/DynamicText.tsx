@@ -1,13 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import './DynamicText.css'
 import Konva from 'konva'
 import { Text } from 'react-konva'
 import { Size } from '../BackgroundCanvas/BackgroundCanvas'
 import { getRandomTextValue } from './dynamic-text-values'
-
-interface DynamicTextProps {
-    layerSize: Size
-}
 
 interface Position {
     x: number
@@ -66,12 +62,12 @@ function calculateDynamicTextConfig(
     }
 }
 
-const DynamicText: React.FC<DynamicTextProps> = (props: DynamicTextProps) => {
+const DynamicText: React.FC<Size> = (props: Size) => {
     const [stage, setStage] = useState<DynamicTextStages>(
         DynamicTextStages.Start
     )
     const [config, setConfig] = useState(
-        calculateDynamicTextConfig(Math.random(), props.layerSize)
+        calculateDynamicTextConfig(Math.random(), props)
     )
     const [textFigure, setTextFigure] = useState<Konva.Text>()
     useEffect(() => {
@@ -103,7 +99,7 @@ const DynamicText: React.FC<DynamicTextProps> = (props: DynamicTextProps) => {
                 })
                 break
             case DynamicTextStages.BeforeStart:
-                const newPosition = calculatePosition(props.layerSize)
+                const newPosition = calculatePosition(props)
                 textFigure.to({
                     x: newPosition.x,
                     y: newPosition.y,
@@ -111,10 +107,7 @@ const DynamicText: React.FC<DynamicTextProps> = (props: DynamicTextProps) => {
                     onFinish() {
                         setStage(DynamicTextStages.Start)
                         setConfig(
-                            calculateDynamicTextConfig(
-                                Math.random(),
-                                props.layerSize
-                            )
+                            calculateDynamicTextConfig(Math.random(), props)
                         )
                     },
                 })
@@ -128,6 +121,12 @@ const DynamicText: React.FC<DynamicTextProps> = (props: DynamicTextProps) => {
             y={config.position.y}
             x={config.position.x}
             opacity={0}
+            onClick={(x) =>
+                x.target.to({
+                    opacity: 0,
+                    duration: 0,
+                })
+            }
             fontSize={config.fontSize}
             fontFamily={'JetBrains Mono'}
             rotation={(config.rotation * 180) / Math.PI}
