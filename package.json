@@ -20,7 +20,7 @@
         "web-vitals": "^0.2.4"
     },
     "scripts": {
-        "build-static": "npm run build && rimraf github-page && move-cli build github-page",
+        "build-static": "npm run build && rimraf docs && move-cli build docs",
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",

@@ -127,9 +127,9 @@
                         r = Object(c.useState)(j(Math.random(), t)),
                         u = Object(l.a)(r, 2),
                         m = u[0],
-                        b = u[1],
-                        f = Object(c.useState)(),
-                        g = Object(l.a)(f, 2),
+                        f = u[1],
+                        b = Object(c.useState)(),
+                        g = Object(l.a)(b, 2),
                         p = g[0],
                         x = g[1]
                     return (
@@ -179,7 +179,7 @@
                                                 duration: 0,
                                                 onFinish: function () {
                                                     o(i.Start),
-                                                        b(j(Math.random(), t))
+                                                        f(j(Math.random(), t))
                                                 },
                                             })
                                     }
@@ -205,7 +205,7 @@
                         })
                     )
                 },
-                b = function () {
+                f = function () {
                     var t = Object(c.useState)(function () {
                             var t = document.documentElement.getBoundingClientRect()
                             return { width: t.width, height: t.height }
@@ -255,9 +255,9 @@
                         })
                     )
                 },
-                f = (n(83), n.p + 'static/media/spotify-outer.fbb9a50f.svg'),
-                g = n.p + 'static/media/github-outer.2cde6554.svg',
-                p = n.p + 'static/media/telegram-outer.ce4c823f.svg',
+                b = (n(83), n.p + 'static/media/spotify-outer.12cf6fc0.svg'),
+                g = n.p + 'static/media/github-outer.a6d59bf4.svg',
+                p = n.p + 'static/media/telegram-outer.a216a42a.svg',
                 x = ['react', 'angular'],
                 v = ['dotnet', 'aspnetcore', 'efcore', 'mssql'],
                 k = ['azure', 'heroku'],
@@ -384,7 +384,7 @@
                                                     children: Object(
                                                         a.jsx
                                                     )('img', {
-                                                        src: f,
+                                                        src: b,
                                                         alt: 'spotify-logo',
                                                         className: 'link-logo',
                                                     }),
@@ -465,7 +465,7 @@
             var S = function () {
                     return Object(a.jsxs)('div', {
                         className: 'App',
-                        children: [Object(a.jsx)(b, {}), Object(a.jsx)(N, {})],
+                        children: [Object(a.jsx)(f, {}), Object(a.jsx)(N, {})],
                     })
                 },
                 w = function (t) {
@@ -494,4 +494,4 @@
     },
     [[84, 1, 2]],
 ])
-//# sourceMappingURL=main.02b6e983.chunk.js.map
+//# sourceMappingURL=main.725c6c9c.chunk.js.map
