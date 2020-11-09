@@ -1,0 +1,25 @@
+{
+    "files": {
+        "main.css": "/static/css/main.f29bdb2c.chunk.css",
+        "main.js": "/static/js/main.02b6e983.chunk.js",
+        "main.js.map": "/static/js/main.02b6e983.chunk.js.map",
+        "runtime-main.js": "/static/js/runtime-main.f396f386.js",
+        "runtime-main.js.map": "/static/js/runtime-main.f396f386.js.map",
+        "static/js/2.82a4fb0c.chunk.js": "/static/js/2.82a4fb0c.chunk.js",
+        "static/js/2.82a4fb0c.chunk.js.map": "/static/js/2.82a4fb0c.chunk.js.map",
+        "static/js/3.9a91213a.chunk.js": "/static/js/3.9a91213a.chunk.js",
+        "static/js/3.9a91213a.chunk.js.map": "/static/js/3.9a91213a.chunk.js.map",
+        "index.html": "/index.html",
+        "static/css/main.f29bdb2c.chunk.css.map": "/static/css/main.f29bdb2c.chunk.css.map",
+        "static/js/2.82a4fb0c.chunk.js.LICENSE.txt": "/static/js/2.82a4fb0c.chunk.js.LICENSE.txt",
+        "static/media/github-outer.2cde6554.svg": "/static/media/github-outer.2cde6554.svg",
+        "static/media/spotify-outer.fbb9a50f.svg": "/static/media/spotify-outer.fbb9a50f.svg",
+        "static/media/telegram-outer.ce4c823f.svg": "/static/media/telegram-outer.ce4c823f.svg"
+    },
+    "entrypoints": [
+        "static/js/runtime-main.f396f386.js",
+        "static/js/2.82a4fb0c.chunk.js",
+        "static/css/main.f29bdb2c.chunk.css",
+        "static/js/main.02b6e983.chunk.js"
+    ]
+}
