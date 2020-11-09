@@ -46,7 +46,8 @@ const BackgroundCanvas: React.FC = () => {
                         .map((_, index) => (
                             <DynamicText
                                 key={`${index}:dynamic-text`}
-                                layerSize={size}
+                                width={size.width}
+                                height={size.height}
                             />
                         ))}
                 </Layer>
