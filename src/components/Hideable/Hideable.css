@@ -1,0 +1,50 @@
+.Hideable {
+    min-height: 20%;
+}
+
+.hideable-arrow-container {
+    padding-top: 5px;
+    user-select: none;
+    min-height: 32px;
+    text-align: center;
+    font-family: 'JetBrains Mono', serif;
+    font-size: 16px;
+    transition: font-size 0.1s;
+    animation-name: switchOpacity;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+    transform-origin: center center;
+}
+
+.hideable-arrow-container:hover {
+    font-size: 20px;
+    transition: font-size 0.3s;
+}
+.hideable-arrow-content {
+    writing-mode: vertical-rl;
+    transition: transform 0.3s;
+}
+.hideable-children {
+    height: 100%;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+.hideable-hidden {
+    max-height: 0;
+    transition: max-height 1s;
+}
+.hideable-arrow-content-flipped {
+    transform: rotate(-180deg);
+    transition: transform 0.3s;
+}
+
+@keyframes switchOpacity {
+    50% {
+        opacity: 0.4;
+    }
+    100% {
+        opacity: 1;
+    }
+}

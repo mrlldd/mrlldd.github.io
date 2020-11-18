@@ -1,9 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './DynamicText.css'
 import Konva from 'konva'
 import { Text } from 'react-konva'
-import { Size } from '../BackgroundCanvas/BackgroundCanvas'
 import { getRandomTextValue } from './dynamic-text-values'
+import { Size } from '../../utils/hooks-utils'
 
 interface Position {
     x: number

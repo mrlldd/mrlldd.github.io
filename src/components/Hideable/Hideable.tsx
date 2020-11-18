@@ -1,0 +1,29 @@
+import React, { useState } from 'react'
+import './Hideable.css'
+
+const Hideable: React.FC<React.PropsWithChildren<unknown>> = (
+    props: React.PropsWithChildren<unknown>
+) => {
+    const [hidden, setHidden] = useState(true)
+    return (
+        <div className="Hideable" data-testid="Hideable">
+            <div className={`hideable-children ${hidden && 'hideable-hidden'}`}>
+                {props.children}
+            </div>
+            <div
+                className="hideable-arrow-container"
+                onClick={() => setHidden(!hidden)}
+            >
+                <span
+                    className={`hideable-arrow-content ${
+                        !hidden && `hideable-arrow-content-flipped`
+                    }`}
+                >
+                    {'|=>'}
+                </span>
+            </div>
+        </div>
+    )
+}
+
+export default Hideable

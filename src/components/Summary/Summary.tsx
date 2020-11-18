@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
 import './Summary.css'
-import spotifyOuterLogo from './links/spotify-outer.svg'
-import githubOuterLogo from './links/github-outer.svg'
-import telegramOuterLogo from './links/telegram-outer.svg'
+import spotifyOuterLogo from './links-media/spotify-outer.svg'
+import githubOuterLogo from './links-media/github-outer.svg'
+import telegramOuterLogo from './links-media/telegram-outer.svg'
+import Hideable from '../Hideable/Hideable'
+import { Size, useSizeState } from '../../utils/hooks-utils'
 
 const frontendSkills = ['react', 'angular']
 
@@ -14,12 +16,16 @@ function openLinkFactory(url: string): () => void {
     return () => window.open(url, '_blank')
 }
 
+const defaultHideableSize: Size = {
+    width: 192,
+    height: 32,
+}
 const Summary: React.FC = () => (
     <div className="Summary" data-testid="Summary">
         <div className="summary-paper">
             <div className="summary-content">
                 <div className="info-container">
-                    <h1>Ivan Yeremenko</h1>
+                    <h2>mrlldd</h2>
                     <div className="skills-sets-container">
                         {[
                             frontendSkills,
@@ -87,41 +93,9 @@ const Summary: React.FC = () => (
                         </div>
                         <div className="link-side-fill" />
                     </div>
-                    <div className="links-content-container">
-                        <div className="link-side-fill" />
-                        <div className="link-container link-content-name-container">
-                            <a
-                                href="https://github.com/mrlldd"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                GitHub
-                            </a>
-                        </div>
-                        <div className="link-side-fill" />
-                        <div className="link-container link-content-name-container">
-                            <a
-                                href="https://t.me/mrlldd"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                Telegram
-                            </a>
-                        </div>
-                        <div className="link-side-fill" />
-                        <div className="link-container link-content-name-container">
-                            <a
-                                href="https://t.me/mrlldd"
-                                rel="noreferrer"
-                                target="_blank"
-                            >
-                                Spotify
-                            </a>
-                        </div>
-                        <div className="link-side-fill" />
-                    </div>
                 </div>
             </div>
+            <Hideable>Sample content</Hideable>
         </div>
     </div>
 )

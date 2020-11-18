@@ -1,42 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import './BackgroundCanvas.css'
 import { Layer, Stage } from 'react-konva'
 import DynamicText from '../DynamicText/DynamicText'
-
-export interface Size {
-    width: number
-    height: number
-}
+import { useSizeState } from '../../utils/hooks-utils'
 
 const BackgroundCanvas: React.FC = () => {
-    const [size, setSize] = useState<Size>(() => {
+    const [size] = useSizeState(() => {
         const rect = document.documentElement.getBoundingClientRect()
         return {
-            width: rect.width,
             height: rect.height,
+            width: rect.width,
         }
     })
-    useEffect(() => {
-        function resizeEventListener() {
-            const rect = document.documentElement.getBoundingClientRect()
-            const size: Size = {
-                width: rect.width,
-                height: rect.height,
-            }
-            setSize(size)
-        }
-
-        function performEventListenerAction(
-            action: (type: string, listener: () => void) => void
-        ) {
-            action('resize', resizeEventListener)
-            action('orientationchange', resizeEventListener)
-        }
-
-        performEventListenerAction(window.addEventListener)
-        return () => performEventListenerAction(window.removeEventListener)
-    }, [])
-
     return (
         <div className="BackgroundCanvas" data-testid="BackgroundCanvas">
             <Stage width={size.width} height={size.height} className="stage">
