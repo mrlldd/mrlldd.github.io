@@ -14,13 +14,13 @@ const Hideable: React.FC<React.PropsWithChildren<unknown>> = (
                 className="hideable-arrow-container"
                 onClick={() => setHidden(!hidden)}
             >
-                <span
+                <div
                     className={`hideable-arrow-content ${
                         !hidden && `hideable-arrow-content-flipped`
                     }`}
                 >
-                    {'|=>'}
-                </span>
+                    {'|>'}
+                </div>
             </div>
         </div>
     )

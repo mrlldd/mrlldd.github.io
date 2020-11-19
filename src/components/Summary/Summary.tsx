@@ -1,10 +1,9 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from 'react'
+import React from 'react'
 import './Summary.css'
-import spotifyOuterLogo from './links-media/spotify-outer.svg'
-import githubOuterLogo from './links-media/github-outer.svg'
-import telegramOuterLogo from './links-media/telegram-outer.svg'
+import spotifyOuterLogo from './links-media/spotify.svg'
+import githubOuterLogo from './links-media/github.svg'
+import telegramOuterLogo from './links-media/telegram.svg'
 import Hideable from '../Hideable/Hideable'
-import { Size, useSizeState } from '../../utils/hooks-utils'
 
 const frontendSkills = ['react', 'angular']
 
@@ -16,10 +15,6 @@ function openLinkFactory(url: string): () => void {
     return () => window.open(url, '_blank')
 }
 
-const defaultHideableSize: Size = {
-    width: 192,
-    height: 32,
-}
 const Summary: React.FC = () => (
     <div className="Summary" data-testid="Summary">
         <div className="summary-paper">

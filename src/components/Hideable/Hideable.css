@@ -15,6 +15,9 @@
     animation-timing-function: ease-in;
     animation-iteration-count: infinite;
     transform-origin: center center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .hideable-arrow-container:hover {
@@ -23,7 +26,7 @@
 }
 .hideable-arrow-content {
     writing-mode: vertical-rl;
-    transition: transform 0.3s;
+    transition: transform 1s;
 }
 .hideable-children {
     height: 100%;
@@ -36,8 +39,8 @@
     transition: max-height 1s;
 }
 .hideable-arrow-content-flipped {
-    transform: rotate(-180deg);
-    transition: transform 0.3s;
+    transform: rotate(-60deg);
+    transition: transform 1s;
 }
 
 @keyframes switchOpacity {
