@@ -113,7 +113,7 @@ const DynamicText: React.FC<Size> = (props: Size) => {
                 })
                 break
         }
-    }, [config, config.position, stage, textFigure])
+    }, [config, stage, textFigure])
     return (
         <Text
             ref={(text) => text && setTextFigure(text)}
@@ -121,16 +121,10 @@ const DynamicText: React.FC<Size> = (props: Size) => {
             y={config.position.y}
             x={config.position.x}
             opacity={0}
-            onClick={(x) =>
-                x.target.to({
-                    opacity: 0,
-                    duration: 0,
-                })
-            }
             fontSize={config.fontSize}
             fontFamily={'JetBrains Mono'}
             rotation={(config.rotation * 180) / Math.PI}
-            fill={'rgb(255, 255, 255, 0.5)'}
+            fill={'rgba(140,140,140,0.6)'}
         />
     )
 }

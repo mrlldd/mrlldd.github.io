@@ -18,6 +18,7 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    overflow: hidden;
 }
 
 .hideable-arrow-container:hover {
@@ -30,7 +31,7 @@
 }
 .hideable-children {
     height: 100%;
-    max-height: 100px;
+    max-height: 130px;
     overflow: hidden;
     transition: max-height 1s;
 }
@@ -45,7 +46,7 @@
 
 @keyframes switchOpacity {
     50% {
-        opacity: 0.4;
+        opacity: 0.2;
     }
     100% {
         opacity: 1;
