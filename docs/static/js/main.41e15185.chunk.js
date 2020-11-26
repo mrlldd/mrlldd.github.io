@@ -11,11 +11,11 @@
             'use strict'
             n.r(e)
             var a,
-                i = n(4),
+                i = n(3),
                 c = n(6),
                 o = n.n(c),
-                s = n(28),
-                r = n.n(s),
+                r = n(28),
+                s = n.n(r),
                 l = (n(33), n(34), n(8)),
                 d = (n(35), n(9)),
                 u =
@@ -124,9 +124,9 @@
                 var e = Object(c.useState)(a.Start),
                     n = Object(l.a)(e, 2),
                     o = n[0],
-                    s = n[1],
-                    r = Object(c.useState)(j(Math.random(), t)),
-                    u = Object(l.a)(r, 2),
+                    r = n[1],
+                    s = Object(c.useState)(j(Math.random(), t)),
+                    u = Object(l.a)(s, 2),
                     b = u[0],
                     f = u[1],
                     m = Object(c.useState)(),
@@ -155,7 +155,7 @@
                                             x: b.position.x + c.x / 2,
                                             y: b.position.y + c.y / 2,
                                             onFinish: function () {
-                                                return s(a.End)
+                                                return r(a.End)
                                             },
                                             duration: b.duration / 2,
                                         })
@@ -166,19 +166,19 @@
                                             x: b.position.x + c.x,
                                             y: b.position.y + c.y,
                                             onFinish: function () {
-                                                return s(a.BeforeStart)
+                                                return r(a.BeforeStart)
                                             },
                                             duration: b.duration / 2,
                                         })
                                         break
                                     case a.BeforeStart:
-                                        var r = h(t)
+                                        var s = h(t)
                                         g.to({
-                                            x: r.x,
-                                            y: r.y,
+                                            x: s.x,
+                                            y: s.y,
                                             duration: 0,
                                             onFinish: function () {
-                                                s(a.Start),
+                                                r(a.Start),
                                                     f(j(Math.random(), t))
                                             },
                                         })
@@ -260,9 +260,9 @@
                         }),
                     })
                 },
-                m = (n(83), n.p + 'static/media/spotify.b326db1a.svg'),
-                p = n.p + 'static/media/github.487ee85d.svg',
-                g = n.p + 'static/media/telegram.a7c021c8.svg',
+                m = (n(83), n.p + 'static/media/spotify.f771ec54.svg'),
+                p = n.p + 'static/media/github.db829821.svg',
+                g = n.p + 'static/media/telegram.7d08cc91.svg',
                 v =
                     (n(84),
                     function (t) {
@@ -297,8 +297,8 @@
                         })
                     }),
                 x = ['react', 'angular'],
-                y = ['dotnet', 'aspnetcore', 'efcore', 'mssql'],
-                O = ['azure', 'heroku'],
+                O = ['dotnet', 'aspnetcore', 'efcore', 'mssql'],
+                y = ['azure', 'heroku'],
                 S = ['ts', 'js', 'csharp']
             var k = [
                     {
@@ -360,37 +360,56 @@
                                     }),
                                 ],
                             }),
-                            Object(i.jsx)(v, {
-                                children: Object(i.jsx)('div', {
-                                    className: 'skills-sets-container',
-                                    children: [x, y, O, S].map(function (t, e) {
-                                        return Object(i.jsx)(
-                                            'div',
-                                            {
-                                                className: 'skill-set-container '.concat(
-                                                    e % 2 === 0 ? 'even' : 'odd'
-                                                ),
-                                                children: t.map(function (
-                                                    t,
-                                                    n
-                                                ) {
-                                                    return Object(i.jsx)(
-                                                        'span',
-                                                        {
-                                                            className:
-                                                                'skill-container',
-                                                            children: t,
-                                                        },
-                                                        ''
-                                                            .concat(e, ':')
-                                                            .concat(n, ':skill')
-                                                    )
-                                                }),
-                                            },
-                                            ''.concat(e, ':skill-set')
-                                        )
+                            Object(i.jsxs)(v, {
+                                children: [
+                                    Object(i.jsx)('h2', {
+                                        children: 'Ivan Yeremenko',
                                     }),
-                                }),
+                                    Object(i.jsx)('h3', {
+                                        children: 'Software Engineer',
+                                    }),
+                                    Object(i.jsx)('h4', {
+                                        children: 'Ukraine, Zaporizhzhya',
+                                    }),
+                                    Object(i.jsx)('div', {
+                                        className: 'skills-sets-container',
+                                        children: [x, O, y, S].map(function (
+                                            t,
+                                            e
+                                        ) {
+                                            return Object(i.jsx)(
+                                                'div',
+                                                {
+                                                    className: 'skill-set-container '.concat(
+                                                        e % 2 === 0
+                                                            ? 'even'
+                                                            : 'odd'
+                                                    ),
+                                                    children: t.map(function (
+                                                        t,
+                                                        n
+                                                    ) {
+                                                        return Object(i.jsx)(
+                                                            'span',
+                                                            {
+                                                                className:
+                                                                    'skill-container',
+                                                                children: t,
+                                                            },
+                                                            ''
+                                                                .concat(e, ':')
+                                                                .concat(
+                                                                    n,
+                                                                    ':skill'
+                                                                )
+                                                        )
+                                                    }),
+                                                },
+                                                ''.concat(e, ':skill-set')
+                                            )
+                                        }),
+                                    }),
+                                ],
                             }),
                         ],
                     })
@@ -416,7 +435,7 @@
                                 n(t), a(t), i(t), c(t), o(t)
                             })
                 }
-            r.a.render(
+            s.a.render(
                 Object(i.jsx)(o.a.StrictMode, {
                     children: Object(i.jsx)(N, {}),
                 }),
@@ -427,4 +446,4 @@
     },
     [[85, 1, 2]],
 ])
-//# sourceMappingURL=main.15d45607.chunk.js.map
+//# sourceMappingURL=main.41e15185.chunk.js.map
