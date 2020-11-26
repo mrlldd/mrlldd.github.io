@@ -62,7 +62,7 @@ const Summary: React.FC = () => (
         <Hideable>
             <h2>Ivan Yeremenko</h2>
             <h3>Software Engineer</h3>
-            <h4>Ukraine, Zaporizhzhya</h4>
+            <h4>Zaporizhzhya, Ukraine</h4>
             <div className="skills-sets-container">
                 {[frontendSkills, backendSkills, devopsSkills, languages].map(
                     (skillSet, index) => (
