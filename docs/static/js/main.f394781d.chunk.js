@@ -369,7 +369,7 @@
                                         children: 'Software Engineer',
                                     }),
                                     Object(i.jsx)('h4', {
-                                        children: 'Ukraine, Zaporizhzhya',
+                                        children: 'Zaporizhzhya, Ukraine',
                                     }),
                                     Object(i.jsx)('div', {
                                         className: 'skills-sets-container',
@@ -446,4 +446,4 @@
     },
     [[85, 1, 2]],
 ])
-//# sourceMappingURL=main.41e15185.chunk.js.map
+//# sourceMappingURL=main.f394781d.chunk.js.map
