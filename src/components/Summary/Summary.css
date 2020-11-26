@@ -5,20 +5,26 @@
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    min-width: 192px;
-    margin: 0 25%;
+    min-width: 224px;
+    max-width: 40%;
     z-index: 1;
 }
 
 .summary-content-header {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-h1,
-h2 {
+h2,
+h3,
+h4 {
     text-align: center;
-    margin-top: 0;
+    margin: 0;
+}
+
+h2 {
+    margin-top: 10px;
 }
 
 .link-container {
@@ -39,6 +45,7 @@ h2 {
 }
 
 .links-logos {
+    max-width: 50%;
     min-height: 64px;
     display: flex;
     flex-direction: row;

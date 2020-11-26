@@ -31,7 +31,7 @@
 }
 .hideable-children {
     height: 100%;
-    max-height: 130px;
+    max-height: 200px;
     overflow: hidden;
     transition: max-height 1s;
 }
