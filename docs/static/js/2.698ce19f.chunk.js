@@ -1,16 +1,12 @@
-/*! For license information please see 2.82a4fb0c.chunk.js.LICENSE.txt */
+/*! For license information please see 2.698ce19f.chunk.js.LICENSE.txt */
 ;(this.webpackJsonpfrontend = this.webpackJsonpfrontend || []).push([
     [2],
     [
         function (t, e, n) {
             'use strict'
-            t.exports = n(29)
-        },
-        function (t, e, n) {
-            'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(4),
-                i = n(3),
+            var r = n(3),
+                i = n(2),
                 a = 'get',
                 o = 'set'
             e.Factory = {
@@ -230,8 +226,8 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(2),
-                i = n(4)
+            var r = n(1),
+                i = n(3)
             function a(t) {
                 return i.Util._isString(t)
                     ? '"' + t + '"'
@@ -408,7 +404,7 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(2),
+            var r = n(1),
                 i = (function () {
                     function t() {}
                     return (
@@ -1211,13 +1207,17 @@
         },
         function (t, e, n) {
             'use strict'
+            t.exports = n(29)
+        },
+        function (t, e, n) {
+            'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(4),
-                i = n(1),
+            var r = n(3),
+                i = n(0),
                 a = n(11),
-                o = n(2),
+                o = n(1),
                 l = n(14),
-                s = n(3)
+                s = n(2)
             ;(e.ids = {}), (e.names = {})
             ;(e._removeId = function (t, n) {
                 t && e.ids[t] === n && delete e.ids[t]
@@ -2679,6 +2679,10 @@
         },
         function (t, e, n) {
             'use strict'
+            t.exports = n(30)
+        },
+        function (t, e, n) {
+            'use strict'
             var r =
                 (this && this.__extends) ||
                 (function () {
@@ -2707,11 +2711,11 @@
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
             var i,
-                a = n(4),
-                o = n(1),
+                a = n(3),
+                o = n(0),
                 l = n(5),
-                s = n(3),
-                u = n(2),
+                s = n(2),
+                u = n(1),
                 c = n(21),
                 f = 'hasShadow',
                 d = 'shadowRGBA',
@@ -3422,10 +3426,6 @@
         },
         function (t, e, n) {
             'use strict'
-            t.exports = n(30)
-        },
-        function (t, e, n) {
-            'use strict'
             function r(t, e) {
                 ;(null == e || e > t.length) && (e = t.length)
                 for (var n = 0, r = new Array(e); n < e; n++) r[n] = t[n]
@@ -3605,11 +3605,11 @@
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
             var i,
-                a = n(4),
+                a = n(3),
                 o = n(20),
-                l = n(2),
-                s = n(1),
-                u = n(3)
+                l = n(1),
+                s = n(0),
+                u = n(2)
             var c = (function () {
                 function t(t) {
                     ;(this.pixelRatio = 1),
@@ -3766,10 +3766,10 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
+            var i = n(3),
+                a = n(0),
                 o = n(5),
-                l = n(3),
+                l = n(2),
                 s = (function (t) {
                     function e() {
                         var e = (null !== t && t.apply(this, arguments)) || this
@@ -4095,8 +4095,8 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(2),
-                i = n(4)
+            var r = n(1),
+                i = n(3)
             ;(e.DD = {
                 get isDragging() {
                     var t = !1
@@ -4232,9 +4232,9 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
+            var i = n(3),
                 a = n(12),
-                o = n(2),
+                o = n(1),
                 l = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -4260,7 +4260,7 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(2),
+            var r = n(1),
                 i =
                     r.glob.performance && r.glob.performance.now
                         ? function () {
@@ -4431,8 +4431,8 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(2),
-                i = n(4),
+            var r = n(1),
+                i = n(3),
                 a = n(5),
                 o = n(12),
                 l = n(38),
@@ -4440,7 +4440,7 @@
                 u = n(39),
                 c = n(15),
                 f = n(14),
-                d = n(6),
+                d = n(7),
                 h = n(16),
                 p = n(40),
                 g = n(20),
@@ -4497,8 +4497,8 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(2),
+            var i = n(3),
+                a = n(1),
                 o = [
                     'arc',
                     'arcTo',
@@ -5034,7 +5034,7 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(2),
+            var r = n(1),
                 i = new Map(),
                 a = void 0 !== r.Konva._global.PointerEvent
             function o(t) {
@@ -5101,14 +5101,14 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
+            var i = n(3),
                 a = n(12),
                 o = n(5),
-                l = n(1),
+                l = n(0),
                 s = n(11),
-                u = n(3),
-                c = n(6),
-                f = n(2),
+                u = n(2),
+                c = n(7),
+                f = n(1),
                 d = [
                     { x: 0, y: 0 },
                     { x: -1, y: -1 },
@@ -5575,11 +5575,11 @@
                         return r
                     }
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var a = n(4),
-                o = n(1),
-                l = n(6),
-                s = n(3),
-                u = n(2),
+            var a = n(3),
+                o = n(0),
+                l = n(7),
+                s = n(2),
+                u = n(1),
                 c = (function (t) {
                     function e(e) {
                         var n = t.call(this, e) || this
@@ -5809,10 +5809,10 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(1),
                 s = (function (t) {
                     function e(n) {
                         var r = t.call(this, n) || this
@@ -6719,11 +6719,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(2),
-                s = n(3),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(1),
+                s = n(2),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -6825,12 +6825,12 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(2),
-                s = n(3),
-                u = n(2)
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(1),
+                s = n(2),
+                u = n(1)
             function c(t) {
                 return Array.from(t)
             }
@@ -7297,7 +7297,7 @@
         function (t, e, n) {
             'use strict'
             n(10)
-            var r = n(7),
+            var r = n(6),
                 i = 60103
             if (
                 ((e.Fragment = 60107),
@@ -7745,7 +7745,7 @@
         },
         function (t, e, n) {
             'use strict'
-            var r = n(7),
+            var r = n(6),
                 i = n(10),
                 a = n(13)
             function o(t) {
@@ -16462,7 +16462,7 @@
                     ? t
                     : e
             }
-            var o = n(7),
+            var o = n(6),
                 l = n(18),
                 s = n(41),
                 u = n(44),
@@ -16649,13 +16649,13 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
+            var i = n(3),
+                a = n(0),
                 o = n(12),
-                l = n(2),
+                l = n(1),
                 s = n(11),
                 u = n(14),
-                c = n(2),
+                c = n(1),
                 f = n(21),
                 d = 'mouseout',
                 h = 'mouseleave',
@@ -17517,9 +17517,9 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
+            var i = n(3),
                 a = n(22),
-                o = n(2),
+                o = n(1),
                 l = (function (t) {
                     function e(e) {
                         var n = t.call(this, e) || this
@@ -17541,10 +17541,10 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(4),
+            var r = n(3),
                 i = n(16),
                 a = n(5),
-                o = n(2),
+                o = n(1),
                 l = { node: 1, duration: 1, easing: 1, onFinish: 1, yoyo: 1 },
                 s = 0,
                 u = ['fill', 'stroke', 'shadowColor'],
@@ -18056,7 +18056,7 @@
                 t.exports = function (e) {
                     var r = {},
                         i = n(10),
-                        a = n(7),
+                        a = n(6),
                         o = n(13)
                     function l(t) {
                         for (
@@ -24847,12 +24847,12 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(2),
-                s = n(3),
-                u = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(1),
+                s = n(2),
+                u = n(1),
                 c = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -24946,11 +24946,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
+            var i = n(3),
+                a = n(0),
                 o = n(24),
-                l = n(3),
-                s = n(2),
+                l = n(2),
+                s = n(1),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -25069,11 +25069,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(3),
-                s = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(2),
+                s = n(1),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -25150,11 +25150,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(3),
-                s = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(2),
+                s = n(1),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -25236,11 +25236,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(3),
-                s = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(2),
+                s = n(1),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -25384,12 +25384,12 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
                 l = n(15),
-                s = n(3),
-                u = n(2),
+                s = n(2),
+                u = n(1),
                 c = [
                     'fontFamily',
                     'fontSize',
@@ -25613,11 +25613,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(3),
-                s = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(2),
+                s = n(1),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -25706,11 +25706,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(3),
-                s = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(2),
+                s = n(1),
                 u = 2 * Math.PI,
                 c = (function (t) {
                     function e() {
@@ -25792,12 +25792,12 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
                 l = n(16),
-                s = n(3),
-                u = n(2),
+                s = n(2),
+                u = n(1),
                 c = (function (t) {
                     function e(e) {
                         var n = t.call(this, e) || this
@@ -25961,11 +25961,11 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(3),
-                s = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(2),
+                s = n(1),
                 u = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -26057,13 +26057,13 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
                 l = n(25),
                 s = n(27),
-                u = n(3),
-                c = n(2),
+                u = n(2),
+                c = n(1),
                 f = 'normal'
             function d(t) {
                 t.fillText(this.partialText, 0, 0)
@@ -26505,15 +26505,15 @@
                             }).apply(this, arguments)
                     }
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var a = n(4),
-                o = n(1),
+            var a = n(3),
+                o = n(0),
                 l = n(5),
-                s = n(6),
+                s = n(7),
                 u = n(26),
                 c = n(15),
-                f = n(2),
-                d = n(3),
-                h = n(2),
+                f = n(1),
+                d = n(2),
+                h = n(1),
                 p = 'tr-konva',
                 g = [
                     'resizeEnabledChange',
@@ -27639,12 +27639,12 @@
                     }
                 })()
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var i = n(4),
-                a = n(1),
-                o = n(6),
-                l = n(2),
-                s = n(3),
-                u = n(2),
+            var i = n(3),
+                a = n(0),
+                o = n(7),
+                l = n(1),
+                s = n(2),
+                u = n(1),
                 c = (function (t) {
                     function e() {
                         return (null !== t && t.apply(this, arguments)) || this
@@ -27708,9 +27708,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             function o() {
                 ;(this.r = 0),
                     (this.g = 0),
@@ -28426,9 +28426,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.Brighten = function (t) {
                 var e,
                     n = 255 * this.brightness(),
@@ -28448,9 +28448,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.Contrast = function (t) {
                 var e,
                     n = Math.pow((this.contrast() + 100) / 100, 2),
@@ -28493,10 +28493,10 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(4),
-                o = n(3)
+                a = n(3),
+                o = n(2)
             ;(e.Emboss = function (t) {
                 var e = 10 * this.embossStrength(),
                     n = 255 * this.embossWhiteLevel(),
@@ -28605,9 +28605,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             function o(t, e, n, r, i) {
                 var a = n - e,
                     o = i - r
@@ -28685,9 +28685,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             r.Factory.addGetterSetter(
                 i.Node,
                 'hue',
@@ -28745,9 +28745,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.HSV = function (t) {
                 var e,
                     n,
@@ -28818,10 +28818,10 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(4),
-                o = n(3)
+                a = n(3),
+                o = n(2)
             ;(e.Kaleidoscope = function (t) {
                 var e,
                     n,
@@ -29006,9 +29006,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             function o(t, e, n) {
                 var r = 4 * (n * t.width + e),
                     i = []
@@ -29215,9 +29215,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.Noise = function (t) {
                 var e,
                     n = 255 * this.noise(),
@@ -29240,10 +29240,10 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
-                i = n(4),
+            var r = n(0),
+                i = n(3),
                 a = n(5),
-                o = n(3)
+                o = n(2)
             ;(e.Pixelate = function (t) {
                 var e,
                     n,
@@ -29315,9 +29315,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.Posterize = function (t) {
                 var e,
                     n = Math.round(254 * this.levels()) + 1,
@@ -29337,9 +29337,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.RGB = function (t) {
                 var e,
                     n,
@@ -29379,9 +29379,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.RGBA = function (t) {
                 var e,
                     n,
@@ -29479,9 +29479,9 @@
         function (t, e, n) {
             'use strict'
             Object.defineProperty(e, '__esModule', { value: !0 })
-            var r = n(1),
+            var r = n(0),
                 i = n(5),
-                a = n(3)
+                a = n(2)
             ;(e.Threshold = function (t) {
                 var e,
                     n = 255 * this.threshold(),
@@ -29499,4 +29499,4 @@
         },
     ],
 ])
-//# sourceMappingURL=2.82a4fb0c.chunk.js.map
+//# sourceMappingURL=2.698ce19f.chunk.js.map
