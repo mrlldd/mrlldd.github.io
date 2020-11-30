@@ -2,4 +2,9 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
+}
+
+.stage {
+    background-color: rgb(10, 38, 95);
 }

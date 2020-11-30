@@ -4,12 +4,7 @@ import spotifyLogo from './links-media/spotify.svg'
 import githubLogo from './links-media/github.svg'
 import telegramLogo from './links-media/telegram.svg'
 import Hideable from '../Hideable/Hideable'
-
-const frontendSkills = ['react', 'angular']
-
-const backendSkills = ['dotnet', 'aspnetcore', 'efcore', 'mssql']
-const devopsSkills = ['azure', 'heroku']
-const languages = ['ts', 'js', 'csharp']
+import { Link } from 'react-router-dom'
 
 function openLinkFactory(url: string): () => void {
     return () => window.open(url, '_blank')
@@ -41,8 +36,8 @@ const logos: LogoElement[] = [
 ]
 
 const Dashboard: React.FC = () => (
-    <div className="Summary" data-testid="Dashboard">
-        <div className="summary-content-header">
+    <div className="Dashboard" data-testid="Dashboard">
+        <div className="dashboard-content-header">
             <div className="info-container">
                 <h2>mrlldd</h2>
                 Forcing electrons to do math
@@ -63,6 +58,7 @@ const Dashboard: React.FC = () => (
             <h2>Ivan Yeremenko</h2>
             <h3>Software Engineer</h3>
             <h4>Zaporizhzhya, Ukraine</h4>
+            <Link to="/cv">More</Link>
         </Hideable>
     </div>
 )
