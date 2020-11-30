@@ -52,30 +52,3 @@ h2 {
     align-items: center;
     justify-content: space-evenly;
 }
-
-.skills-sets-container {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.skills-sets-container > * > .skill-container {
-    font-family: 'JetBrains Mono', serif;
-    margin: 3px;
-}
-
-.skill-set-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    min-width: 50%;
-    flex-wrap: wrap;
-}
-
-.skills-sets-container > .even {
-    align-self: flex-start;
-}
-
-.skills-sets-container > .odd {
-    align-self: flex-end;
-}

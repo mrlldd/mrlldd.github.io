@@ -1,13 +1,13 @@
 import React from 'react'
 import './App.css'
 import BackgroundCanvas from './components/BackgroundCanvas/BackgroundCanvas'
-import Summary from './components/Summary/Summary'
+import Dashboard from './components/Dashboard/Dashboard'
 
 function App() {
     return (
         <div className="App">
             <BackgroundCanvas />
-            <Summary />
+            <Dashboard />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Summary.css'
+import './Dashboard.css'
 import spotifyLogo from './links-media/spotify.svg'
 import githubLogo from './links-media/github.svg'
 import telegramLogo from './links-media/telegram.svg'
@@ -40,8 +40,8 @@ const logos: LogoElement[] = [
     },
 ]
 
-const Summary: React.FC = () => (
-    <div className="Summary" data-testid="Summary">
+const Dashboard: React.FC = () => (
+    <div className="Summary" data-testid="Dashboard">
         <div className="summary-content-header">
             <div className="info-container">
                 <h2>mrlldd</h2>
@@ -63,29 +63,8 @@ const Summary: React.FC = () => (
             <h2>Ivan Yeremenko</h2>
             <h3>Software Engineer</h3>
             <h4>Zaporizhzhya, Ukraine</h4>
-            <div className="skills-sets-container">
-                {[frontendSkills, backendSkills, devopsSkills, languages].map(
-                    (skillSet, index) => (
-                        <div
-                            key={`${index}:skill-set`}
-                            className={`skill-set-container ${
-                                index % 2 === 0 ? 'even' : 'odd'
-                            }`}
-                        >
-                            {skillSet.map((x, skillIndex) => (
-                                <span
-                                    key={`${index}:${skillIndex}:skill`}
-                                    className="skill-container"
-                                >
-                                    {x}
-                                </span>
-                            ))}
-                        </div>
-                    )
-                )}
-            </div>
         </Hideable>
     </div>
 )
 
-export default Summary
+export default Dashboard

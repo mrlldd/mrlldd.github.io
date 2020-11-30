@@ -10,14 +10,14 @@
         85: function (t, e, n) {
             'use strict'
             n.r(e)
-            var a,
-                i = n(3),
-                c = n(6),
-                o = n.n(c),
+            var i,
+                a = n(4),
+                o = n(6),
+                c = n.n(o),
                 r = n(28),
                 s = n.n(r),
-                l = (n(33), n(34), n(8)),
-                d = (n(35), n(9)),
+                d = (n(33), n(34), n(8)),
+                l = (n(35), n(9)),
                 u =
                     (n(82),
                     [
@@ -119,75 +119,75 @@
                 ;(t[(t.Start = 0)] = 'Start'),
                     (t[(t.End = 1)] = 'End'),
                     (t[(t.BeforeStart = 2)] = 'BeforeStart')
-            })(a || (a = {}))
+            })(i || (i = {}))
             var b = function (t) {
-                var e = Object(c.useState)(a.Start),
-                    n = Object(l.a)(e, 2),
-                    o = n[0],
+                var e = Object(o.useState)(i.Start),
+                    n = Object(d.a)(e, 2),
+                    c = n[0],
                     r = n[1],
-                    s = Object(c.useState)(j(Math.random(), t)),
-                    u = Object(l.a)(s, 2),
+                    s = Object(o.useState)(j(Math.random(), t)),
+                    u = Object(d.a)(s, 2),
                     b = u[0],
                     f = u[1],
-                    m = Object(c.useState)(),
-                    p = Object(l.a)(m, 2),
+                    m = Object(o.useState)(),
+                    p = Object(d.a)(m, 2),
                     g = p[0],
                     v = p[1]
                 return (
-                    Object(c.useEffect)(
+                    Object(o.useEffect)(
                         function () {
                             if (g) {
                                 var e,
                                     n,
-                                    i,
-                                    c =
+                                    a,
+                                    o =
                                         ((e = (g.rotation() * Math.PI) / 180),
                                         (n = b.side ? 1 : -1),
-                                        (i = b.pathLength),
+                                        (a = b.pathLength),
                                         {
-                                            x: n * Math.cos(e) * i,
-                                            y: n * Math.sin(e) * i,
+                                            x: n * Math.cos(e) * a,
+                                            y: n * Math.sin(e) * a,
                                         })
-                                switch (o) {
-                                    case a.Start:
+                                switch (c) {
+                                    case i.Start:
                                         g.to({
                                             opacity: b.opacity,
-                                            x: b.position.x + c.x / 2,
-                                            y: b.position.y + c.y / 2,
+                                            x: b.position.x + o.x / 2,
+                                            y: b.position.y + o.y / 2,
                                             onFinish: function () {
-                                                return r(a.End)
+                                                return r(i.End)
                                             },
                                             duration: b.duration / 2,
                                         })
                                         break
-                                    case a.End:
+                                    case i.End:
                                         g.to({
                                             opacity: 0,
-                                            x: b.position.x + c.x,
-                                            y: b.position.y + c.y,
+                                            x: b.position.x + o.x,
+                                            y: b.position.y + o.y,
                                             onFinish: function () {
-                                                return r(a.BeforeStart)
+                                                return r(i.BeforeStart)
                                             },
                                             duration: b.duration / 2,
                                         })
                                         break
-                                    case a.BeforeStart:
+                                    case i.BeforeStart:
                                         var s = h(t)
                                         g.to({
                                             x: s.x,
                                             y: s.y,
                                             duration: 0,
                                             onFinish: function () {
-                                                r(a.Start),
+                                                r(i.Start),
                                                     f(j(Math.random(), t))
                                             },
                                         })
                                 }
                             }
                         },
-                        [b, o, g]
+                        [b, c, g]
                     ),
-                    Object(i.jsx)(d.Text, {
+                    Object(a.jsx)(l.Text, {
                         ref: function (t) {
                             return t && v(t)
                         },
@@ -204,15 +204,15 @@
             }
             var f = function () {
                     var t = (function (t) {
-                            var e = Object(c.useState)(t),
-                                n = Object(l.a)(e, 2),
-                                a = n[0],
-                                i = n[1]
+                            var e = Object(o.useState)(t),
+                                n = Object(d.a)(e, 2),
+                                i = n[0],
+                                a = n[1]
                             return (
-                                Object(c.useEffect)(
+                                Object(o.useEffect)(
                                     function () {
                                         function e() {
-                                            i(t())
+                                            a(t())
                                         }
                                         function n(t) {
                                             t('resize', e),
@@ -229,25 +229,25 @@
                                     },
                                     [t]
                                 ),
-                                [a]
+                                [i]
                             )
                         })(function () {
                             var t = document.documentElement.getBoundingClientRect()
                             return { height: t.height, width: t.width }
                         }),
-                        e = Object(l.a)(t, 1)[0]
-                    return Object(i.jsx)('div', {
+                        e = Object(d.a)(t, 1)[0]
+                    return Object(a.jsx)('div', {
                         className: 'BackgroundCanvas',
                         'data-testid': 'BackgroundCanvas',
-                        children: Object(i.jsx)(d.Stage, {
+                        children: Object(a.jsx)(l.Stage, {
                             width: e.width,
                             height: e.height,
                             className: 'stage',
-                            children: Object(i.jsx)(d.Layer, {
+                            children: Object(a.jsx)(l.Layer, {
                                 children: Array(24)
                                     .fill(void 0)
                                     .map(function (t, n) {
-                                        return Object(i.jsx)(
+                                        return Object(a.jsx)(
                                             b,
                                             {
                                                 width: e.width,
@@ -266,28 +266,28 @@
                 v =
                     (n(84),
                     function (t) {
-                        var e = Object(c.useState)(!0),
-                            n = Object(l.a)(e, 2),
-                            a = n[0],
-                            o = n[1]
-                        return Object(i.jsxs)('div', {
+                        var e = Object(o.useState)(!0),
+                            n = Object(d.a)(e, 2),
+                            i = n[0],
+                            c = n[1]
+                        return Object(a.jsxs)('div', {
                             className: 'Hideable',
                             'data-testid': 'Hideable',
                             children: [
-                                Object(i.jsx)('div', {
+                                Object(a.jsx)('div', {
                                     className: 'hideable-children '.concat(
-                                        a && 'hideable-hidden'
+                                        i && 'hideable-hidden'
                                     ),
                                     children: t.children,
                                 }),
-                                Object(i.jsx)('div', {
+                                Object(a.jsx)('div', {
                                     className: 'hideable-arrow-container',
                                     onClick: function () {
-                                        return o(!a)
+                                        return c(!i)
                                     },
-                                    children: Object(i.jsx)('div', {
+                                    children: Object(a.jsx)('div', {
                                         className: 'hideable-arrow-content '.concat(
-                                            !a &&
+                                            !i &&
                                                 'hideable-arrow-content-flipped'
                                         ),
                                         children: '|>',
@@ -295,12 +295,8 @@
                                 }),
                             ],
                         })
-                    }),
-                x = ['react', 'angular'],
-                O = ['dotnet', 'aspnetcore', 'efcore', 'mssql'],
-                y = ['azure', 'heroku'],
-                S = ['ts', 'js', 'csharp']
-            var k = [
+                    })
+            var x = [
                     {
                         alt: 'github-logo',
                         content: p,
@@ -318,27 +314,27 @@
                             'https://open.spotify.com/user/1ytvagjswjl00avixcs29sh4v?si=C9eGNEyQTNGxSkr4j1o6WA',
                     },
                 ],
-                w = function () {
-                    return Object(i.jsxs)('div', {
+                y = function () {
+                    return Object(a.jsxs)('div', {
                         className: 'Summary',
-                        'data-testid': 'Summary',
+                        'data-testid': 'Dashboard',
                         children: [
-                            Object(i.jsxs)('div', {
+                            Object(a.jsxs)('div', {
                                 className: 'summary-content-header',
                                 children: [
-                                    Object(i.jsxs)('div', {
+                                    Object(a.jsxs)('div', {
                                         className: 'info-container',
                                         children: [
-                                            Object(i.jsx)('h2', {
+                                            Object(a.jsx)('h2', {
                                                 children: 'mrlldd',
                                             }),
                                             'Forcing electrons to do math',
                                         ],
                                     }),
-                                    Object(i.jsx)('div', {
+                                    Object(a.jsx)('div', {
                                         className: 'links-logos',
-                                        children: k.map(function (t, e) {
-                                            return Object(i.jsx)(
+                                        children: x.map(function (t, e) {
+                                            return Object(a.jsx)(
                                                 'img',
                                                 {
                                                     alt: t.alt,
@@ -360,67 +356,29 @@
                                     }),
                                 ],
                             }),
-                            Object(i.jsxs)(v, {
+                            Object(a.jsxs)(v, {
                                 children: [
-                                    Object(i.jsx)('h2', {
+                                    Object(a.jsx)('h2', {
                                         children: 'Ivan Yeremenko',
                                     }),
-                                    Object(i.jsx)('h3', {
+                                    Object(a.jsx)('h3', {
                                         children: 'Software Engineer',
                                     }),
-                                    Object(i.jsx)('h4', {
+                                    Object(a.jsx)('h4', {
                                         children: 'Zaporizhzhya, Ukraine',
-                                    }),
-                                    Object(i.jsx)('div', {
-                                        className: 'skills-sets-container',
-                                        children: [x, O, y, S].map(function (
-                                            t,
-                                            e
-                                        ) {
-                                            return Object(i.jsx)(
-                                                'div',
-                                                {
-                                                    className: 'skill-set-container '.concat(
-                                                        e % 2 === 0
-                                                            ? 'even'
-                                                            : 'odd'
-                                                    ),
-                                                    children: t.map(function (
-                                                        t,
-                                                        n
-                                                    ) {
-                                                        return Object(i.jsx)(
-                                                            'span',
-                                                            {
-                                                                className:
-                                                                    'skill-container',
-                                                                children: t,
-                                                            },
-                                                            ''
-                                                                .concat(e, ':')
-                                                                .concat(
-                                                                    n,
-                                                                    ':skill'
-                                                                )
-                                                        )
-                                                    }),
-                                                },
-                                                ''.concat(e, ':skill-set')
-                                            )
-                                        }),
                                     }),
                                 ],
                             }),
                         ],
                     })
                 }
-            var N = function () {
-                    return Object(i.jsxs)('div', {
+            var O = function () {
+                    return Object(a.jsxs)('div', {
                         className: 'App',
-                        children: [Object(i.jsx)(f, {}), Object(i.jsx)(w, {})],
+                        children: [Object(a.jsx)(f, {}), Object(a.jsx)(y, {})],
                     })
                 },
-                T = function (t) {
+                S = function (t) {
                     t &&
                         t instanceof Function &&
                         n
@@ -428,22 +386,22 @@
                             .then(n.bind(null, 86))
                             .then(function (e) {
                                 var n = e.getCLS,
-                                    a = e.getFID,
-                                    i = e.getFCP,
-                                    c = e.getLCP,
-                                    o = e.getTTFB
-                                n(t), a(t), i(t), c(t), o(t)
+                                    i = e.getFID,
+                                    a = e.getFCP,
+                                    o = e.getLCP,
+                                    c = e.getTTFB
+                                n(t), i(t), a(t), o(t), c(t)
                             })
                 }
             s.a.render(
-                Object(i.jsx)(o.a.StrictMode, {
-                    children: Object(i.jsx)(N, {}),
+                Object(a.jsx)(c.a.StrictMode, {
+                    children: Object(a.jsx)(O, {}),
                 }),
                 document.getElementById('root')
             ),
-                T()
+                S()
         },
     },
     [[85, 1, 2]],
 ])
-//# sourceMappingURL=main.f394781d.chunk.js.map
+//# sourceMappingURL=main.07ee01be.chunk.js.map
