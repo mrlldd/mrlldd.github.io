@@ -2,3 +2,18 @@
     margin: 5% 15%;
     align-self: flex-start;
 }
+
+.back-button {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    left: calc(15% - 32px);
+    font-family: 'JetBrains Mono', sans-serif;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+}

@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: 'Allerta', sans-serif;
+    font-family: Allerta, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100vh;
@@ -13,11 +13,6 @@ code {
 }
 
 @font-face {
-    font-family: 'JetBrains Mono';
+    font-family: JetBrains Mono;
     src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf');
-}
-
-@font-face {
-    font-family: 'Allerta';
-    src: url('https://fonts.googleapis.com/css2?family=Allerta&display=swap');
 }

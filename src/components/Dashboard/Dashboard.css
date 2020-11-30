@@ -52,3 +52,10 @@ h2 {
     align-items: center;
     justify-content: space-evenly;
 }
+
+.centered {
+    text-align: center;
+    display: block;
+    color: white;
+    margin: 15px 0;
+}
