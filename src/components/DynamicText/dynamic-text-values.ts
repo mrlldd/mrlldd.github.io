@@ -73,6 +73,8 @@ const textValues = [
     '--global',
     'SOAP',
     'REST',
+    '\0',
+    '=>',
 ]
 
 export function getRandomTextValue(): string {
