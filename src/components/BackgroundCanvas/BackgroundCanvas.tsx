@@ -4,6 +4,17 @@ import { Layer, Stage } from 'react-konva'
 import DynamicText from '../DynamicText/DynamicText'
 import { useSizeState } from '../../utils/hooks-utils'
 
+function deviceDetectionNotifier(device: 'desktop' | 'mobile'): void {
+    console.log(`detected ${device} device!`)
+}
+function isMobile(): boolean {
+    const result = 'ontouchstart' in document.documentElement
+    deviceDetectionNotifier(result ? 'mobile' : 'desktop')
+    return result
+}
+
+const valuesCount = isMobile() ? 12 : 24
+
 const BackgroundCanvas: React.FC = (props) => {
     const [size] = useSizeState(() => {
         const rect = document.documentElement.getBoundingClientRect()
@@ -21,7 +32,7 @@ const BackgroundCanvas: React.FC = (props) => {
                     className="stage"
                 >
                     <Layer>
-                        {Array(24)
+                        {Array(valuesCount)
                             .fill(undefined)
                             .map((_, index) => (
                                 <DynamicText
