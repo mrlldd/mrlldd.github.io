@@ -59,7 +59,7 @@ const Dashboard: React.FC = () => (
             <h3>Software Engineer</h3>
             <h4>Zaporizhzhya, Ukraine</h4>
             <Link to="/cv" className="centered">
-                More
+                CV
             </Link>
         </Hideable>
     </div>

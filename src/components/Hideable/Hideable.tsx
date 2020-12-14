@@ -11,12 +11,12 @@ const Hideable: React.FC<React.PropsWithChildren<unknown>> = (
                 {props.children}
             </div>
             <div
-                className="hideable-arrow-container"
+                className="hideable-arrow-container switching-opacity switch-opacity-a-lot"
                 onClick={() => setHidden(!hidden)}
             >
                 <div
                     className={`hideable-arrow-content ${
-                        !hidden && `hideable-arrow-content-flipped`
+                        !hidden ? `hideable-arrow-content-flipped` : ''
                     }`}
                 >
                     {'|>'}

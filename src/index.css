@@ -17,3 +17,37 @@ code {
     font-family: JetBrains Mono;
     src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf');
 }
+
+.switching-opacity {
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.switch-opacity-a-few-with-color {
+    animation-name: switchOpacityAFewWithColor;
+}
+
+.switch-opacity-a-lot {
+    animation-name: switchOpacityALot;
+}
+
+@keyframes switchOpacityAFewWithColor {
+    50% {
+        opacity: 0.8;
+        color: #a5a5a5;
+    }
+    100% {
+        opacity: 1;
+        color: white;
+    }
+}
+
+@keyframes switchOpacityALot {
+    50% {
+        opacity: 0.2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
