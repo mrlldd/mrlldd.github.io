@@ -1,10 +1,10 @@
 .BackgroundCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .stage {
-    background-color: rgb(10, 38, 95);
+  background-color: rgb(10, 38, 95);
 }

@@ -6,7 +6,7 @@ import BackgroundCanvas from './BackgroundCanvas';
 describe('<BackgroundCanvas />', () => {
   test('it should mount', () => {
     render(<BackgroundCanvas />);
-    
+
     const backgroundCanvas = screen.getByTestId('BackgroundCanvas');
 
     expect(backgroundCanvas).toBeInTheDocument();
