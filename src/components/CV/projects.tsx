@@ -91,7 +91,7 @@ export const projectsMap: Map<ProjectKeys, Project> = new Map([
   [
     ProjectKeys.SoundCloudTrackDownloaderTelegramBot,
     {
-      link: 'https://github.com/mrlldd/dotnet-media-seek-telegram-bot',
+      link: 'https://github.com/mrlldd/dotnet-soundcloud-telegram-bot',
       renderedDescription: soundCloudTrackDownloaderTelegramBotDescription,
     },
   ],
