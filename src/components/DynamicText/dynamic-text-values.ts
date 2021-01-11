@@ -38,6 +38,7 @@ const textValues = [
   '.jsx',
   '.ts',
   '.js',
+  '.fs',
   '.cs',
   '.css',
   '.json',
@@ -86,6 +87,9 @@ const textValues = [
   'let inline logJson obj = obj |> json |> printfn "%s"',
   "'a option",
   "Result<'a, 'b>",
+  'csharp',
+  'fsharp',
+  'javascript',
 ];
 
 export function getRandomTextValue(): string {
