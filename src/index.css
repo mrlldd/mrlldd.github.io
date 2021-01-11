@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: Allerta, sans-serif;
+  font-family: Noto Sans JP, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
@@ -16,6 +16,19 @@ code {
 @font-face {
   font-family: JetBrains Mono;
   src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf');
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.some-margin-left {
+  margin-left: 25px;
 }
 
 .switching-opacity {

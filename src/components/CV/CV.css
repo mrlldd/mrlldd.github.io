@@ -38,11 +38,11 @@
   color: white;
 }
 
-.period-content {
+.content {
   word-wrap: break-word;
   margin-left: 32px;
 }
-.period-row-content {
+.row-content {
   word-wrap: break-word;
   margin-left: 64px;
 }
@@ -53,6 +53,14 @@
 
 .italic {
   font-style: italic;
+}
+
+.with-normal-weight {
+  font-weight: lighter;
+}
+
+.lighter {
+  font-weight: lighter;
 }
 
 @keyframes switchOpacity {

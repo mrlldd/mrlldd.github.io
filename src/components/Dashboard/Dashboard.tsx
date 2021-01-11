@@ -54,11 +54,11 @@ const Dashboard: React.FC = () => (
         ))}
       </div>
     </div>
-    <Hideable>
+    <Hideable maxHeight={130}>
       <h2>Ivan Yeremenko</h2>
       <h3>Software Engineer</h3>
       <h4>Zaporizhzhya, Ukraine</h4>
-      <Link to="/cv" className="centered">
+      <Link to="/cv" className="centered italic">
         CV
       </Link>
     </Hideable>
