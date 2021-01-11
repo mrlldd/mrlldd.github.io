@@ -53,8 +53,8 @@ const hookrRentServiceDescription = (
         marginLeft: 32,
       }}>
       - Telegram bot(<Context>csharp</Context>, <Context>dotnet</Context>,{' '}
+      <Context>efcore</Context>)
     </span>
-    <Context>efcore</Context>)
     <br />
     <span
       style={{
@@ -77,7 +77,7 @@ export const projectsMap: Map<ProjectKeys, Project> = new Map([
   [
     ProjectKeys.Functional,
     {
-      link: 'https://github.com/mrlldd/functional',
+      link: 'https://github.com/mrlldd/dotnet-functional',
       renderedDescription: functionalLibraryDescription,
     },
   ],
