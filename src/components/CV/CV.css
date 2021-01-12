@@ -1,2 +1,73 @@
 .CV {
+  margin: 16px;
+  align-self: flex-start;
+}
+
+.back-button {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+
+  width: 32px;
+  height: 32px;
+
+  top: 16px;
+  left: 16px;
+  font-family: 'JetBrains Mono', sans-serif;
+  font-size: 18px;
+  user-select: none;
+  cursor: pointer;
+}
+
+@media all and (min-device-width: 640px) and (min-device-height: 640px) {
+  .back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    margin-top: calc((5% - 32px) - 16px);
+    margin-left: calc((15% - 32px) - 16px);
+  }
+  .CV {
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+}
+
+.contact-link {
+  color: white;
+}
+
+.content {
+  word-wrap: break-word;
+  margin-left: 32px;
+}
+.row-content {
+  word-wrap: break-word;
+  margin-left: 64px;
+}
+
+.main-context {
+  font-family: JetBrains Mono, sans-serif;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.with-normal-weight {
+  font-weight: lighter;
+}
+
+.lighter {
+  font-weight: lighter;
+}
+
+@keyframes switchOpacity {
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
 }

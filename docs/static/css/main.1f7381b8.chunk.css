@@ -1,0 +1,264 @@
+body {
+  margin: 0;
+  font-family: Noto Sans JP, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  min-height: 100vh;
+}
+code {
+  font-family: 'JetBrains Mono', source-code-pro, Menlo, Monaco, Consolas,
+    'Courier New', monospace;
+  color: #a5a5a5;
+}
+@font-face {
+  font-family: JetBrains Mono;
+  src: url(https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/ttf/JetBrainsMono-Regular.ttf);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.some-margin-left {
+  margin-left: 25px;
+}
+.switching-opacity {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+.switch-opacity-a-few-with-color {
+  -webkit-animation-name: switchOpacityAFewWithColor;
+  animation-name: switchOpacityAFewWithColor;
+}
+.switch-opacity-a-lot {
+  -webkit-animation-name: switchOpacityALot;
+  animation-name: switchOpacityALot;
+}
+@-webkit-keyframes switchOpacityAFewWithColor {
+  50% {
+    opacity: 0.8;
+    color: #a5a5a5;
+  }
+  to {
+    opacity: 1;
+    color: #fff;
+  }
+}
+@keyframes switchOpacityAFewWithColor {
+  50% {
+    opacity: 0.8;
+    color: #a5a5a5;
+  }
+  to {
+    opacity: 1;
+    color: #fff;
+  }
+}
+@-webkit-keyframes switchOpacityALot {
+  50% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes switchOpacityALot {
+  50% {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+}
+.BackgroundCanvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.stage {
+  background-color: #0a265f;
+}
+.Dashboard {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  min-width: 224px;
+  max-width: 40%;
+  z-index: 1;
+}
+.dashboard-content-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2,
+h3,
+h4 {
+  text-align: center;
+  margin: 0;
+}
+h2 {
+  margin-top: 10px;
+}
+.link-container {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.info-container {
+  text-align: center;
+}
+.link-logo:hover {
+  cursor: pointer;
+}
+.link-logo {
+  min-width: 64px;
+  max-width: 10%;
+}
+.links-logos {
+  max-width: 50%;
+  min-height: 64px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.centered {
+  text-align: center;
+  display: block;
+  color: #fff;
+  margin: 15px 0;
+}
+.Hideable {
+  min-height: 20%;
+}
+.hideable-arrow-container {
+  padding-top: 5px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-height: 32px;
+  text-align: center;
+  font-family: 'JetBrains Mono', serif;
+  font-size: 16px;
+  transition: font-size 0.1s;
+  transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  overflow: hidden;
+}
+.hideable-arrow-container:hover {
+  font-size: 20px;
+  transition: font-size 0.3s;
+}
+.hideable-arrow-content {
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+  transition: transform 1s;
+}
+.hideable-children {
+  height: 100%;
+  overflow: hidden;
+  transition: max-height 1s;
+}
+.hideable-hidden {
+  max-height: 0;
+  transition: max-height 1s;
+}
+.hideable-arrow-content-flipped {
+  transform: rotate(-60deg);
+  transition: transform 1s;
+}
+.CV {
+  margin: 16px;
+  align-self: flex-start;
+}
+.back-button {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  top: 16px;
+  left: 16px;
+  font-family: 'JetBrains Mono', sans-serif;
+  font-size: 18px;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+}
+@media (min-device-width: 640px) and (min-device-height: 640px) {
+  .back-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    margin-top: calc(5% - 48px);
+    margin-left: calc(15% - 48px);
+  }
+  .CV {
+    margin-top: 5%;
+    margin-left: 15%;
+  }
+}
+.contact-link {
+  color: #fff;
+}
+.content {
+  word-wrap: break-word;
+  margin-left: 32px;
+}
+.row-content {
+  word-wrap: break-word;
+  margin-left: 64px;
+}
+.main-context {
+  font-family: JetBrains Mono, sans-serif;
+}
+.italic {
+  font-style: italic;
+}
+.lighter,
+.with-normal-weight {
+  font-weight: lighter;
+}
+@-webkit-keyframes switchOpacity {
+  50% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes switchOpacity {
+  50% {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.with-normal-weight {
+  font-weight: 400;
+}
+/*# sourceMappingURL=main.1f7381b8.chunk.css.map */
