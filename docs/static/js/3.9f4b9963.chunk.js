@@ -1,7 +1,7 @@
 (this.webpackJsonpfrontend = this.webpackJsonpfrontend || []).push([
   [3],
   {
-    86: function (t, n, e) {
+    105: function (t, n, e) {
       'use strict';
       e.r(n),
         e.d(n, 'getCLS', function () {
@@ -207,10 +207,7 @@
                 performance.getEntriesByType('navigation')[0] ||
                 (function () {
                   var t = performance.timing,
-                    n = {
-                      entryType: 'navigation',
-                      startTime: 0,
-                    };
+                    n = { entryType: 'navigation', startTime: 0 };
                   for (var e in t)
                     'navigationStart' !== e &&
                       'toJSON' !== e &&
@@ -230,4 +227,4 @@
     },
   },
 ]);
-//# sourceMappingURL=3.906ac874.chunk.js.map
+//# sourceMappingURL=3.9f4b9963.chunk.js.map
