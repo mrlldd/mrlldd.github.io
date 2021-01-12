@@ -1,4 +1,4 @@
-/*! For license information please see 2.537f8aff.chunk.js.LICENSE.txt */
+/*! For license information please see 2.453b8f72.chunk.js.LICENSE.txt */
 (this.webpackJsonpfrontend = this.webpackJsonpfrontend || []).push([
   [2],
   [
@@ -1141,7 +1141,7 @@
       Object.defineProperty(e, '__esModule', { value: !0 });
       var r = n(5),
         i = n(2),
-        a = n(18),
+        a = n(19),
         o = n(3),
         l = n(23),
         s = n(4);
@@ -2428,7 +2428,7 @@
       var r = n(11),
         i = n(1),
         a = n.n(i),
-        o = (n(15), n(13)),
+        o = (n(16), n(13)),
         l = n(27),
         s = n(12),
         u = n(8),
@@ -4125,6 +4125,190 @@
       });
     },
     function (t, e, n) {
+      'use strict';
+      n.d(e, 'a', function () {
+        return f;
+      }),
+        n.d(e, 'b', function () {
+          return y;
+        });
+      var r = n(7),
+        i = n(11),
+        a = n(1),
+        o = n.n(a),
+        l = n(13),
+        s = (n(16), n(8)),
+        u = n(14),
+        c = n(12),
+        f = (function (t) {
+          function e() {
+            for (
+              var e, n = arguments.length, r = new Array(n), i = 0;
+              i < n;
+              i++
+            )
+              r[i] = arguments[i];
+            return (
+              ((e = t.call.apply(t, [this].concat(r)) || this).history = Object(
+                l.a
+              )(e.props)),
+              e
+            );
+          }
+          return (
+            Object(i.a)(e, t),
+            (e.prototype.render = function () {
+              return o.a.createElement(r.c, {
+                history: this.history,
+                children: this.props.children,
+              });
+            }),
+            e
+          );
+        })(o.a.Component);
+      o.a.Component;
+      var d = function (t, e) {
+          return 'function' === typeof t ? t(e) : t;
+        },
+        h = function (t, e) {
+          return 'string' === typeof t ? Object(l.c)(t, null, null, e) : t;
+        },
+        p = function (t) {
+          return t;
+        },
+        g = o.a.forwardRef;
+      'undefined' === typeof g && (g = p);
+      var v = g(function (t, e) {
+        var n = t.innerRef,
+          r = t.navigate,
+          i = t.onClick,
+          a = Object(u.a)(t, ['innerRef', 'navigate', 'onClick']),
+          l = a.target,
+          c = Object(s.a)({}, a, {
+            onClick: function (t) {
+              try {
+                i && i(t);
+              } catch (e) {
+                throw (t.preventDefault(), e);
+              }
+              t.defaultPrevented ||
+                0 !== t.button ||
+                (l && '_self' !== l) ||
+                (function (t) {
+                  return !!(t.metaKey || t.altKey || t.ctrlKey || t.shiftKey);
+                })(t) ||
+                (t.preventDefault(), r());
+            },
+          });
+        return (c.ref = (p !== g && e) || n), o.a.createElement('a', c);
+      });
+      var y = g(function (t, e) {
+          var n = t.component,
+            i = void 0 === n ? v : n,
+            a = t.replace,
+            l = t.to,
+            f = t.innerRef,
+            y = Object(u.a)(t, ['component', 'replace', 'to', 'innerRef']);
+          return o.a.createElement(r.e.Consumer, null, function (t) {
+            t || Object(c.a)(!1);
+            var n = t.history,
+              r = h(d(l, t.location), t.location),
+              u = r ? n.createHref(r) : '',
+              v = Object(s.a)({}, y, {
+                href: u,
+                navigate: function () {
+                  var e = d(l, t.location);
+                  (a ? n.replace : n.push)(e);
+                },
+              });
+            return (
+              p !== g ? (v.ref = e || f) : (v.innerRef = f),
+              o.a.createElement(i, v)
+            );
+          });
+        }),
+        m = function (t) {
+          return t;
+        },
+        b = o.a.forwardRef;
+      'undefined' === typeof b && (b = m);
+      b(function (t, e) {
+        var n = t['aria-current'],
+          i = void 0 === n ? 'page' : n,
+          a = t.activeClassName,
+          l = void 0 === a ? 'active' : a,
+          f = t.activeStyle,
+          p = t.className,
+          g = t.exact,
+          v = t.isActive,
+          _ = t.location,
+          w = t.sensitive,
+          S = t.strict,
+          x = t.style,
+          k = t.to,
+          C = t.innerRef,
+          P = Object(u.a)(t, [
+            'aria-current',
+            'activeClassName',
+            'activeStyle',
+            'className',
+            'exact',
+            'isActive',
+            'location',
+            'sensitive',
+            'strict',
+            'style',
+            'to',
+            'innerRef',
+          ]);
+        return o.a.createElement(r.e.Consumer, null, function (t) {
+          t || Object(c.a)(!1);
+          var n = _ || t.location,
+            a = h(d(k, n), n),
+            u = a.pathname,
+            E = u && u.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
+            T = E
+              ? Object(r.f)(n.pathname, {
+                  path: E,
+                  exact: g,
+                  sensitive: w,
+                  strict: S,
+                })
+              : null,
+            O = !!(v ? v(T, n) : T),
+            N = O
+              ? (function () {
+                  for (
+                    var t = arguments.length, e = new Array(t), n = 0;
+                    n < t;
+                    n++
+                  )
+                    e[n] = arguments[n];
+                  return e
+                    .filter(function (t) {
+                      return t;
+                    })
+                    .join(' ');
+                })(p, l)
+              : p,
+            M = O ? Object(s.a)({}, x, {}, f) : x,
+            A = Object(s.a)(
+              {
+                'aria-current': (O && i) || null,
+                className: N,
+                style: M,
+                to: a,
+              },
+              P
+            );
+          return (
+            m !== b ? (A.ref = e || C) : (A.innerRef = C),
+            o.a.createElement(y, A)
+          );
+        });
+      });
+    },
+    function (t, e, n) {
       t.exports = n(98)();
     },
     function (t, e, n) {
@@ -4662,162 +4846,6 @@
         a.Factory.addGetterSetter(s, 'clipFunc'),
         i.Collection.mapMethods(s);
     },
-    function (t, e, n) {
-      'use strict';
-      n.d(e, 'a', function () {
-        return v;
-      });
-      var r = n(7),
-        i = n(11),
-        a = n(1),
-        o = n.n(a),
-        l = n(13),
-        s = (n(15), n(8)),
-        u = n(14),
-        c = n(12);
-      o.a.Component;
-      o.a.Component;
-      var f = function (t, e) {
-          return 'function' === typeof t ? t(e) : t;
-        },
-        d = function (t, e) {
-          return 'string' === typeof t ? Object(l.c)(t, null, null, e) : t;
-        },
-        h = function (t) {
-          return t;
-        },
-        p = o.a.forwardRef;
-      'undefined' === typeof p && (p = h);
-      var g = p(function (t, e) {
-        var n = t.innerRef,
-          r = t.navigate,
-          i = t.onClick,
-          a = Object(u.a)(t, ['innerRef', 'navigate', 'onClick']),
-          l = a.target,
-          c = Object(s.a)({}, a, {
-            onClick: function (t) {
-              try {
-                i && i(t);
-              } catch (e) {
-                throw (t.preventDefault(), e);
-              }
-              t.defaultPrevented ||
-                0 !== t.button ||
-                (l && '_self' !== l) ||
-                (function (t) {
-                  return !!(t.metaKey || t.altKey || t.ctrlKey || t.shiftKey);
-                })(t) ||
-                (t.preventDefault(), r());
-            },
-          });
-        return (c.ref = (h !== p && e) || n), o.a.createElement('a', c);
-      });
-      var v = p(function (t, e) {
-          var n = t.component,
-            i = void 0 === n ? g : n,
-            a = t.replace,
-            l = t.to,
-            v = t.innerRef,
-            y = Object(u.a)(t, ['component', 'replace', 'to', 'innerRef']);
-          return o.a.createElement(r.e.Consumer, null, function (t) {
-            t || Object(c.a)(!1);
-            var n = t.history,
-              r = d(f(l, t.location), t.location),
-              u = r ? n.createHref(r) : '',
-              g = Object(s.a)({}, y, {
-                href: u,
-                navigate: function () {
-                  var e = f(l, t.location);
-                  (a ? n.replace : n.push)(e);
-                },
-              });
-            return (
-              h !== p ? (g.ref = e || v) : (g.innerRef = v),
-              o.a.createElement(i, g)
-            );
-          });
-        }),
-        y = function (t) {
-          return t;
-        },
-        m = o.a.forwardRef;
-      'undefined' === typeof m && (m = y);
-      m(function (t, e) {
-        var n = t['aria-current'],
-          i = void 0 === n ? 'page' : n,
-          a = t.activeClassName,
-          l = void 0 === a ? 'active' : a,
-          h = t.activeStyle,
-          p = t.className,
-          g = t.exact,
-          b = t.isActive,
-          _ = t.location,
-          w = t.sensitive,
-          S = t.strict,
-          x = t.style,
-          k = t.to,
-          C = t.innerRef,
-          P = Object(u.a)(t, [
-            'aria-current',
-            'activeClassName',
-            'activeStyle',
-            'className',
-            'exact',
-            'isActive',
-            'location',
-            'sensitive',
-            'strict',
-            'style',
-            'to',
-            'innerRef',
-          ]);
-        return o.a.createElement(r.e.Consumer, null, function (t) {
-          t || Object(c.a)(!1);
-          var n = _ || t.location,
-            a = d(f(k, n), n),
-            u = a.pathname,
-            E = u && u.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1'),
-            T = E
-              ? Object(r.f)(n.pathname, {
-                  path: E,
-                  exact: g,
-                  sensitive: w,
-                  strict: S,
-                })
-              : null,
-            O = !!(b ? b(T, n) : T),
-            N = O
-              ? (function () {
-                  for (
-                    var t = arguments.length, e = new Array(t), n = 0;
-                    n < t;
-                    n++
-                  )
-                    e[n] = arguments[n];
-                  return e
-                    .filter(function (t) {
-                      return t;
-                    })
-                    .join(' ');
-                })(p, l)
-              : p,
-            M = O ? Object(s.a)({}, x, {}, h) : x,
-            A = Object(s.a)(
-              {
-                'aria-current': (O && i) || null,
-                className: N,
-                style: M,
-                to: a,
-              },
-              P
-            );
-          return (
-            y !== m ? (A.ref = e || C) : (A.innerRef = C),
-            o.a.createElement(v, A)
-          );
-        });
-      });
-    },
     ,
     function (t, e, n) {
       'use strict';
@@ -4948,7 +4976,7 @@
         })();
       Object.defineProperty(e, '__esModule', { value: !0 });
       var i = n(5),
-        a = n(19),
+        a = n(20),
         o = n(3),
         l = (function (t) {
           function e() {
@@ -5129,7 +5157,7 @@
         var r = n(1),
           i = n.n(r),
           a = n(11),
-          o = n(15),
+          o = n(16),
           l = n.n(o),
           s = 1073741823,
           u =
@@ -5485,7 +5513,7 @@
       var r = n(3),
         i = n(5),
         a = n(6),
-        o = n(19),
+        o = n(20),
         l = n(51),
         s = n(34),
         u = n(52),
@@ -5495,7 +5523,7 @@
         h = n(25),
         p = n(53),
         g = n(32),
-        v = n(18);
+        v = n(19);
       e.Konva = i.Util._assign(r.Konva, {
         Collection: i.Collection,
         Util: i.Util,
@@ -6090,10 +6118,10 @@
         })();
       Object.defineProperty(e, '__esModule', { value: !0 });
       var i = n(5),
-        a = n(19),
+        a = n(20),
         o = n(6),
         l = n(2),
-        s = n(18),
+        s = n(19),
         u = n(4),
         c = n(9),
         f = n(3),
@@ -7939,7 +7967,7 @@
     },
     function (t, e, n) {
       'use strict';
-      n(17);
+      n(18);
       var r = n(1),
         i = 60103;
       if (((e.Fragment = 60107), 'function' === typeof Symbol && Symbol.for)) {
@@ -7976,7 +8004,7 @@
     },
     function (t, e, n) {
       'use strict';
-      var r = n(17),
+      var r = n(18),
         i = 60103,
         a = 60106;
       (e.Fragment = 60107), (e.StrictMode = 60108), (e.Profiler = 60114);
@@ -8361,7 +8389,7 @@
     function (t, e, n) {
       'use strict';
       var r = n(1),
-        i = n(17),
+        i = n(18),
         a = n(22);
       function o(t) {
         for (
@@ -16421,9 +16449,9 @@
       Object.defineProperty(e, '__esModule', { value: !0 });
       var i = n(5),
         a = n(2),
-        o = n(19),
+        o = n(20),
         l = n(3),
-        s = n(18),
+        s = n(19),
         u = n(23),
         c = n(3),
         f = n(33),
@@ -17640,7 +17668,7 @@
       (function (t) {
         t.exports = function (e) {
           var r = {},
-            i = n(17),
+            i = n(18),
             a = n(1),
             o = n(22);
           function l(t) {
@@ -27819,4 +27847,4 @@
     },
   ],
 ]);
-//# sourceMappingURL=2.537f8aff.chunk.js.map
+//# sourceMappingURL=2.453b8f72.chunk.js.map
