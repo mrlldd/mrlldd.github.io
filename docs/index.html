@@ -17,7 +17,30 @@
     />
     <link rel="manifest" href="/manifest.json" />
     <title>mrlldd</title>
-    <link href="/static/css/main.1f7381b8.chunk.css" rel="stylesheet" />
+    <script>
+      !(function (i) {
+        if (i.search) {
+          const n = {};
+          i.search
+            .slice(1)
+            .split('&')
+            .forEach(function (i) {
+              const c = i.split('=');
+              n[c[0]] = c.slice(1).join('=').replace(/~and~/g, '&');
+            }),
+            void 0 !== n.p &&
+              window.history.replaceState(
+                null,
+                null,
+                i.pathname.slice(0, -1) +
+                  (n.p || '') +
+                  (n.q ? '?' + n.q : '') +
+                  i.hash
+              );
+        }
+      })(window.location);
+    </script>
+    <link href="/static/css/main.bc8c2252.chunk.css" rel="stylesheet" />
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -171,7 +194,7 @@
         t();
       })([]);
     </script>
-    <script src="/static/js/2.453b8f72.chunk.js"></script>
-    <script src="/static/js/main.9833c222.chunk.js"></script>
+    <script src="/static/js/2.537f8aff.chunk.js"></script>
+    <script src="/static/js/main.0e3eef4f.chunk.js"></script>
   </body>
 </html>

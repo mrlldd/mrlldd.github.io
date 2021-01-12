@@ -13,7 +13,7 @@
         o = n(41),
         s = n.n(o),
         l = (n(47), n(48), n(10)),
-        d = (n(49), n(17)),
+        d = (n(49), n(16)),
         j =
           (n(95),
           [
@@ -313,7 +313,7 @@
               ],
             });
           }),
-        v = n(15);
+        v = n(20);
       var k,
         y = [
           { alt: 'github-logo', content: O, link: 'https://github.com/mrlldd' },
@@ -368,7 +368,7 @@
                   Object(r.jsx)('h2', { children: 'Ivan Yeremenko' }),
                   Object(r.jsx)('h3', { children: 'Software Engineer' }),
                   Object(r.jsx)('h4', { children: 'Zaporizhzhya, Ukraine' }),
-                  Object(r.jsx)(v.b, {
+                  Object(r.jsx)(v.a, {
                     to: '/cv',
                     className: 'centered italic',
                     children: 'CV',
@@ -702,10 +702,12 @@
         });
       };
       var P = function () {
+          var e = Object(S.g)();
           return Object(r.jsx)('div', {
             className: 'App',
             children: Object(r.jsx)(m, {
-              children: Object(r.jsx)(v.a, {
+              children: Object(r.jsx)(S.c, {
+                history: e,
                 children: Object(r.jsxs)(S.d, {
                   children: [
                     Object(r.jsx)(S.b, {
@@ -751,4 +753,4 @@
   },
   [[104, 1, 2]],
 ]);
-//# sourceMappingURL=main.9833c222.chunk.js.map
+//# sourceMappingURL=main.0e3eef4f.chunk.js.map
