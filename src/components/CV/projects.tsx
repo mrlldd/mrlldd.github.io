@@ -52,17 +52,17 @@ const hookrRentServiceDescription = (
       style={{
         marginLeft: 32,
       }}>
-      - Telegram bot(<Context>csharp</Context>, <Context>dotnet</Context>,{' '}
-      <Context>efcore</Context>)
+      - Telegram bot(<Context>csharp</Context>, <Context>aspnetcore</Context>,{' '}
+      <Context>efcore</Context>, <Context>mssql</Context>)
     </span>
     <br />
     <span
       style={{
         marginLeft: 32,
       }}>
-      - PWA(<Context>aspnetcore</Context>,{' '}
+      - PWA(<Context>csharp</Context>,{' '}
     </span>
-    <Context>csharp</Context>, <Context>typescript</Context>,{' '}
+    <Context>aspnetcore</Context>, <Context>typescript</Context>,{' '}
     <Context>react</Context>)
     <br />
   </>
