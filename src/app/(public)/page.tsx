@@ -1,9 +1,10 @@
 import SocialLinks from "./components/social-links";
 import Link from "next/link";
 import Quotes from "@/app/(public)/components/quotes";
-import ContextWrapper from "@/app/(public)/components/context-wrapper";
+import TextAttentionCollector from "@/app/(public)/components/context-wrapper";
 import {Suspense} from "react";
 import Loading from "@/app/loading";
+import {FaLink} from "react-icons/fa6";
 
 export default function Home() {
     return (
@@ -21,9 +22,12 @@ export default function Home() {
                 </Suspense>
             </div>
             <Link href='./cv'>
-                <ContextWrapper>
-                    <span className='font-bold text-xl'>CV</span>
-                </ContextWrapper>
+                <TextAttentionCollector>
+                    <div className="flex flex-row gap-1 items-center">
+                        <span className='font-bold text-xl'>CV </span>
+                        <FaLink size='16'/>
+                    </div>
+                </TextAttentionCollector>
             </Link>
         </main>
     );

@@ -44,7 +44,9 @@ export const technologies: SkillSetProps = {
         'Docker',
         'Datadog',
         'RabbitMQ',
-        'OpenAPI'
+        'OpenAPI',
+        'Helm',
+        'Bicep'
     ]
 }
 
@@ -76,7 +78,8 @@ export const devTools: SkillSetProps = {
         'Postman',
         'Fiddler',
         'Docker',
-        'Kubernetes'
+        'Kubernetes',
+        'Structurizr'
     ]
 }
 

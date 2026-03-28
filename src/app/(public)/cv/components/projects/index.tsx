@@ -9,7 +9,7 @@ export interface Project {
 
 
 interface ProjectsProps {
-    map: Map<string, Project>;
+    map: Record<string, Project>;
     name: string;
     id: string;
 }
@@ -18,7 +18,7 @@ function Projects({name, map, id}: ProjectsProps) {
     return (
         <CvSection header={name} id={id}>
             <div className='flex flex-col gap-8'>
-                {Array.from(map.entries()).map(([k, v], index) => (
+                {Object.entries(map).map(([k, v], index) => (
                     <span key={`projects:${name}:${index}`}>
             <a
                 className="italic"

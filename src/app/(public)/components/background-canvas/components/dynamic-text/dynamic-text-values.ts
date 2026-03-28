@@ -147,7 +147,19 @@ const textValues: ReadonlyArray<string> = [
     "code cohesion",
     "code coupling",
     "tech-debt",
-    "solution"
+    "solution",
+    'HybridCache',
+    'subscribe',
+    '.onAnotherCoolEvent(handler)',
+    'whoami',
+    'system-d',
+    'nano another.yaml',
+    'Caddy',
+    'kubectl',
+    'helm',
+    'bicep',
+    'C4',
+    'Structurizr'
 ];
 
 function noncePseudoRandom(nonce: number) {
